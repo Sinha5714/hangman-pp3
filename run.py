@@ -21,3 +21,15 @@ def randomWord():
     randomWord = random.choice(words)
     return randomWord.upper()
 
+def enter_name():
+    """
+    Function to enter the player name in alphabets only and return playerName
+    """
+    playerName = input(" Enter your name: " )
+    if playerName.isalpha():
+        print(f'Welcome {playerName}')
+    else:
+        print("Invalid Input. Name should only be in alphabets")
+    return playerName
+    
+
