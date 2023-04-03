@@ -2,7 +2,7 @@ import random
 import colorama
 from colorama import Fore
 
-print('\n-------------------------------------------------------------------------------------------------------------------------------------------')
+print(Fore.GREEN'\n-------------------------------------------------------------------------------------------------------------------------------------------')
 print(Fore.GREEN +'||        ||        //\\       ||\\      ||  ||============   ||\\      //||       //\\       ||\\      ||')
 print(Fore.RED +'||        ||       //  \\      || \\     ||  ||               || \\    // ||      //  \\      || \\     ||')
 print(Fore.GREEN +'||        ||      //    \\     ||  \\    ||  ||               ||  \\  //  ||     //    \\     ||  \\    ||')
@@ -60,5 +60,29 @@ def play_hangman(randomWord):
     print("|    ")
     print("===   ")
 
+    # While loop which will run until the tries are over
+    while tries > 0:
+        # Variable counting wrong input from user
+        wrong_letter_count = 0
+        # Input letter provided by user and returned in uppercase
+        guess = input("\n Please enter a letter: ").upper() 
 
-    
+        # If/Else statement to validate the input provided by user
+        if len(guess) == 1 and guess.isalpha():
+            # If/Else statement to check the letter was already guessed by user
+            if guess in guessed_letters:
+                print(f"You have already guessed the letter {guess}")
+            elif guess not in randomWord:
+                print("\n You guessed wrong. Try Again")
+                tries -= 1 # Reduce by one with each wrong guess
+                print(f"\n Attempt left: {tries}")
+                guessed_letters.append(guess)
+            else:
+                print(f"Correct! There is one or more {guess} in the secret word.")         
+        else:
+           print("\n Invalid input. Enter only one character and it must be an alphabet")
+        
+        # Guess from user added in guessed_letters list
+        guessed_letters.append(guess)
+        
+        
