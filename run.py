@@ -5,13 +5,13 @@ import colorama
 from colorama import Fore
 
 
-print(Fore.RED + "==================================================================================")
+print(Fore.RED + "=======================================================================")
 print(Fore.BLUE + '||      ||    //\\    ||\\    || ||=========  ||\\    //||     //\\     ||\\    ||')
 print(Fore.BLUE + '||      ||   //  \\   || \\   || ||           || \\  // ||    //  \\    || \\   ||')
 print(Fore.BLUE + '||======||  //====\\  ||  \\  || ||   ||===|| ||  \\//  ||   //====\\   ||  \\  ||')
 print(Fore.BLUE + '||      || //      \\ ||   \\ || ||   ||   || ||       ||  //      \\  ||   \\ ||')
 print(Fore.BLUE + '||      ||//        \\||    \\|| ======    || ||       || //        \\ ||    \\||')
-print(Fore.RED + "==================================================================================")
+print(Fore.RED + "=====================================================================")
 
  # A list of words from which the random words will be chose for the game
 words = ['flower', 'nurse','house','packet','rather','zebra','human','table','laptop',
@@ -37,8 +37,9 @@ def rules():
     """
     Function to display rules of the game
     """
-    while True:
+    while True: # Loop to ask the same question if there is an error
         playerKnowledge = input(f"{Fore.GREEN}\nDo you want to see the rules? : YES/NO \n")
+
         if playerKnowledge.isalpha() and playerKnowledge.upper() == "YES":
             print(f"{Fore.YELLOW}\nHOW TO PLAY:-")
             print(f"{Fore.YELLOW}\n\nGoal: guess the word and save the man!")
@@ -57,12 +58,15 @@ def play_hangman(randomWord):
     """
     guessed_letters = [] # List holds the letters player guessed
     tries = 6  # Total number of tries provided to player
+
     # Initial display of hangman game
     print(Fore.RED + display_hangman(tries))
+
     # While loop which will run until the tries are over
     while tries > 0:
         # Variable counting wrong input from user
         wrong_letter_count = 0
+
         # Input letter provided by user and returned in uppercase
         guess = input(Fore.GREEN + "\n\nPlease enter a letter: ").upper() 
 
@@ -108,7 +112,7 @@ def play_hangman(randomWord):
 def display_hangman(tries): 
     """
     Function to display various stages of hangman game. It consist of array holding different
-    stage and will be dependent on the tries.
+    stages and will be dependent on the tries.
     """       
     stages = [  """
                 +----+"
