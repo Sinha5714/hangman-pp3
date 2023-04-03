@@ -1,15 +1,17 @@
+# To import random module
 import random
+# To import colorama module
 import colorama
 from colorama import Fore
 
 
-print('\n------------------------------------------------------------------------------------\n')
-print('||      ||      //\\     ||\\    ||  ||=========  ||\\    //||     //\\     ||\\    ||')
-print('||      ||     //  \\    || \\   ||  ||           || \\  // ||    //  \\    || \\   ||')
-print('||======||    //====\\   ||  \\  ||  ||   ||===|| ||  \\//  ||   //====\\   ||  \\  ||')
-print('||      ||   //      \\  ||   \\ ||  ||   ||   || ||       ||  //      \\  ||   \\ ||')
-print('||      ||  //        \\ ||    \\||  ======    || ||       || //        \\ ||    \\||')
-print('\n------------------------------------------------------------------------------------\n')
+print(Fore.RED + "==================================================================================")
+print(Fore.BLUE + '||      ||    //\\    ||\\    || ||=========  ||\\    //||     //\\     ||\\    ||')
+print(Fore.BLUE + '||      ||   //  \\   || \\   || ||           || \\  // ||    //  \\    || \\   ||')
+print(Fore.BLUE + '||======||  //====\\  ||  \\  || ||   ||===|| ||  \\//  ||   //====\\   ||  \\  ||')
+print(Fore.BLUE + '||      || //      \\ ||   \\ || ||   ||   || ||       ||  //      \\  ||   \\ ||')
+print(Fore.BLUE + '||      ||//        \\||    \\|| ======    || ||       || //        \\ ||    \\||')
+print(Fore.RED + "==================================================================================")
 
  # A list of words from which the random words will be chose for the game
 words = ['flower', 'nurse','house','packet','rather','zebra','human','table','laptop',
@@ -27,8 +29,8 @@ def enterName():
     """
     Asks the player for their name and logs the name
     """
-    userName = input("Enter your name: \n")
-    print(f"Welcome {userName} to the Hangman Game:)\n")
+    userName = input(Fore.CYAN + "Enter your name: \n")
+    print(f"{Fore.GREEN}\nWelcome {userName} to the Hangman Game:)\n")
     rules()
 
 def rules():
@@ -36,19 +38,18 @@ def rules():
     Function to display rules of the game
     """
     while True:
-        playerKnowledge = input(f"Do you want to see the rules? : YES/NO \n")
+        playerKnowledge = input(f"{Fore.GREEN}\nDo you want to see the rules? : YES/NO \n")
         if playerKnowledge.isalpha() and playerKnowledge.upper() == "YES":
-            print("HOW TO PLAY:-")
-            print("\nGoal: guess the word and save the man!")
-            print("Everytime you can type only one letter.")
-            print("Make 6 wrong guesses and you lose. The man will die!")
+            print(f"{Fore.YELLOW}\nHOW TO PLAY:-")
+            print(f"{Fore.YELLOW}\n\nGoal: guess the word and save the man!")
+            print(f"{Fore.YELLOW}\nEverytime you can type only one letter.")
+            print(f"{Fore.YELLOW}\nMake 6 wrong guesses and you lose. The man will die!")
             break
         elif playerKnowledge.upper() == "NO":
-            print("Starting Game....")
-            play_hangman(randomWord)
+            print(f"{Fore.GREEN}\nStarting Game....\n")
             break
         else:
-            print("Invalid input. Please enter YES or NO\n")
+            print(f"{Fore.RED}\nInvalid input. Please enter YES or NO\n")
         
 def play_hangman(randomWord):
     """
@@ -56,36 +57,36 @@ def play_hangman(randomWord):
     """
     guessed_letters = [] # List holds the letters player guessed
     tries = 6  # Total number of tries provided to player
-    print(display_hangman(tries))
-
+    # Initial display of hangman game
+    print(Fore.RED + display_hangman(tries))
     # While loop which will run until the tries are over
     while tries > 0:
         # Variable counting wrong input from user
         wrong_letter_count = 0
         # Input letter provided by user and returned in uppercase
-        guess = input("\n\nPlease enter a letter: ").upper() 
+        guess = input(Fore.GREEN + "\n\nPlease enter a letter: ").upper() 
 
         # If/Else statement to validate the input provided by user
         if len(guess) == 1 and guess.isalpha():
             # If/Else statement to check the letter was already guessed by user
             if guess in guessed_letters:
-                print(f"You have already guessed the letter {guess}")
+                print(f"{Fore.YELLOW}\nYou have already guessed the letter {guess}")
                 print(display_hangman(tries))
-                print(f"\n Attempt left: {tries}")
+                print(f"{Fore.RED}\n Attempt left: {tries}")
             elif guess not in randomWord:
-                print("\n You guessed wrong. Try Again")
+                print(Fore.RED + "\n You guessed wrong. Try Again")
                 tries -= 1 # Reduce by one with each wrong guess
-                print(f"\n Attempt left: {tries}")
-                print(display_hangman(tries))
+                print(f"{Fore.RED}\n Attempt left: {tries}")
+                print(Fore.RED + display_hangman(tries))
                 guessed_letters.append(guess)
             else:
-                print(f"Correct! There is one or more {guess} in the secret word.")
-                print(f"\n Attempt left: {tries}")
-                print(display_hangman(tries))         
+                print(f"{Fore.GREEN}\nCorrect! There is one or more {guess} in the secret word.")
+                print(f"{Fore.RED}\n Attempt left: {tries}")
+                print(Fore.RED + display_hangman(tries))         
         else:
-            print("\n Invalid input. Enter only one character and it must be an alphabet")
-            print(f"\n Attempt left: {tries}")
-            print(display_hangman(tries)) 
+            print(Fore.RED + "\n Invalid input. Enter only one character and it must be an alphabet")
+            print(f"{Fore.RED}\n Attempt left: {tries}")
+            print(Fore.RED + display_hangman(tries)) 
         
         # Guess from user added in guessed_letters list
         guessed_letters.append(guess)
