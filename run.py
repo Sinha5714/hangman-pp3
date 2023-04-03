@@ -70,6 +70,7 @@ def play_hangman(randomWord):
             # If/Else statement to check the letter was already guessed by user
             if guess in guessed_letters:
                 print(f"You have already guessed the letter {guess}")
+                print(display_hangman(tries))
                 print(f"\n Attempt left: {tries}")
             elif guess not in randomWord:
                 print("\n You guessed wrong. Try Again")
