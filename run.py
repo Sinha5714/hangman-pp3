@@ -2,18 +2,18 @@ import random
 import colorama
 from colorama import Fore
 
-print('\n-------------------------------------------------------------------------------------------------------------------------------------------\n')
-print(Fore.GREEN +'||        ||        //\\       ||\\      ||  ||============   ||\\      //||       //\\       ||\\      ||')
-print(Fore.RED +'||        ||       //  \\      || \\     ||  ||               || \\    // ||      //  \\      || \\     ||')
-print(Fore.GREEN +'||        ||      //    \\     ||  \\    ||  ||               ||  \\  //  ||     //    \\     ||  \\    ||')
-print(Fore.RED +'||========||     //======\\    ||   \\   ||  ||      ||====|| ||   \\//   ||    //======\\    ||   \\   ||')
-print(Fore.GREEN +'||        ||    //        \\   ||    \\  ||  ||      ||    || ||         ||   //        \\   ||    \\  ||')
-print(Fore.RED +'||        ||   //          \\  ||     \\ ||  ||      ||    || ||         ||  //          \\  ||     \\ ||')
-print(Fore.GREEN +'||        ||  //            \\ ||      \\||  =========     || ||         || //            \\ ||      \\||')
-print('\n-------------------------------------------------------------------------------------------------------------------------------------------')
+print('\n---------------------------------------------------------------------------------------\n')
+print('||      ||      //\\     ||\\    ||  ||=========  ||\\    //||     //\\     ||\\    ||')
+print('||      ||     //  \\    || \\   ||  ||           || \\  // ||    //  \\    || \\   ||')
+print('||======||    //====\\   ||  \\  ||  ||   ||===|| ||  \\//  ||   //====\\   ||  \\  ||')
+print('||      ||   //      \\  ||   \\ ||  ||   ||   || ||       ||  //      \\  ||   \\ ||')
+print('||      ||  //        \\ ||    \\||  ======    || ||       || //        \\ ||    \\||')
+print('\n----------------------------------------------------------------------------------------\n')
 
  # A list of words from which the random words will be chose for the game
-words = ['flower', 'nurse','house','packet','rather','zebra','human','table','laptop','rating','notice','abroad','accept','bridge','bamboo','escape','excess','guitar','hunter','health','jumble','kitten','legacy','notice','radius','online']
+words = ['flower', 'nurse','house','packet','rather','zebra','human','table','laptop',
+        'rating','notice','abroad','accept','bridge','bamboo','escape','excess',
+        'guitar','hunter','health','jumble','kitten','legacy','notice','radius','online']
 
 def randomWord():
     """
