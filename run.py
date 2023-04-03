@@ -1,7 +1,8 @@
-# To import random module
+"""
+To import random module
+"""
 import random
 # To import colorama module
-import colorama
 from colorama import Fore
 
 print(Fore.RED + "================================================")
@@ -41,22 +42,30 @@ def enterName():
 
 def rules():
     """
-    Function to display rules of the game
+    Contains a while loop to ask question to open rules
     """
-    while True: # Loop to ask the same question if there is an error
-        playerKnowledge = input(Fore.RED+"Do you want to see the rules? y/n")
+    # Loop to ask the same question if there is an error
+    while True:
+        playerKnowledge = input(Fore.RED+"Open Rules: Y/N \n")
         if playerKnowledge.isalpha() and playerKnowledge.upper() == "Y":
-            print(f"{Fore.YELLOW}\nHOW TO PLAY:-")
-            print(f"{Fore.YELLOW}\n\nGoal: guess the word and save the man!")
-            print(f"{Fore.YELLOW}\nEverytime you can type only one letter.")
-            print(f"{Fore.YELLOW}\nMake 6 wrong guesses and you lose.")
-            print(f"{Fore.YELLOW}\nThe man will die!")
+            how_to_play()
             break
         elif playerKnowledge.upper() == "N":
             print(f"{Fore.GREEN}\nStarting Game....\n")
             break
         else:
             print(f"{Fore.RED}\nInvalid input. Please enter Y or N\n")
+
+
+def how_to_play():
+    """
+    Function to display rules of the game
+    """
+    print(f"{Fore.CYAN}\nHOW TO PLAY:-")
+    print(f"{Fore.YELLOW}\nGoal: guess the word and save the man!")
+    print(f"{Fore.YELLOW}\nEverytime you can type only one letter.")
+    print(f"{Fore.YELLOW}\nMake 6 wrong guesses and you lose.")
+    print(f"{Fore.YELLOW}\nThe man will die!")
 
 
 def play_hangman(randomWord):
@@ -66,7 +75,7 @@ def play_hangman(randomWord):
     # List holds the letters player guessed
     guessed_letters = []
     # Total number of tries provided to player
-    tries = 6 
+    tries = 6
 
     # Initial display of hangman game
     print(Fore.RED + display_hangman(tries))
@@ -88,14 +97,15 @@ def play_hangman(randomWord):
                 print(f"{Fore.RED}\n Attempt left: {tries}")
             elif guess not in randomWord:
                 print(Fore.RED + "\n You guessed wrong. Try Again")
-                tries -= 1 # Reduce by one with each wrong guess
+                # Reduce by one with each wrong guess
+                tries -= 1
                 print(f"{Fore.RED}\n Attempt left: {tries}")
                 print(Fore.RED + display_hangman(tries))
                 guessed_letters.append(guess)
             else:
                 print(f"{Fore.GREEN}\nCorrect! {guess} is in the word.")
                 print(f"{Fore.RED}\n Attempt left: {tries}")
-                print(Fore.RED + display_hangman(tries))         
+                print(Fore.RED + display_hangman(tries))
         else:
             print(Fore.RED + "\n Invalid input. Enter only one letter")
             print(f"{Fore.RED}\n Attempt left: {tries}")
@@ -107,93 +117,88 @@ def play_hangman(randomWord):
         # For loop to check the value of the input and print it for display
         for letter in randomWord:
             if letter in guessed_letters:
-                print(f"{letter}", end = ' ')
+                print(f"{letter}", end=' ')
             else:
-                print("_", end = ' ')
+                print("_", end=' ')
                 # Increment as the input from user is wrong
-                wrong_letter_count += 1 
-
-        # If wrong_letter_count is 0. Player wins and the loop breaks        
+                wrong_letter_count += 1
+        # If wrong_letter_count is 0. Player wins and the loop breaks
         if wrong_letter_count == 0:
             print(f"\n Well Done. The secret word was {randomWord}.\n")
             print("You saved the man:)")
             break
     return tries
 
-def display_hangman(tries): 
+
+def display_hangman(tries):
     """
     Function to display various stages of hangman game. It consist of array
     holding different stages and will be dependent on the tries.
-    """       
-    stages = [  """
+    """     
+    stages = ["""
                 +----+"
-                |    O 
-                |   /|\ 
-                |   / \ 
-                ===    
-                """,
-                
-                """
-                +----+
-                |    O 
-                |   /|\ 
-                |   / 
+                |    O
+                |   /|\
+                |   / \
                 ===
-                """,
-                """
+              """,
+              """
                 +----+
-                |    O 
-                |   /|\ 
-                |      
-                ===  
-                """,
-                 
-                """
+                |    O
+                |   /|\
+                |   /
+                ===
+              """,
+              """
                 +----+
-                |    O 
-                |   /| 
-                |     
-                ===    
-                """,
-                """
+                |    O
+                |   /|\
+                |
+                ===
+              """,
+              """
+                +----+
+                |    O
+                |   /|
+                |
+                ===
+              """,
+              """
                 +----+
                 |    O
                 |    |
-                |    
-                ===   
-                """,
-                """
-                +----+    
-                |    O
-                |    
-                |    
-                ===      
-                """,
-                """
+                |
+                ===
+              """,
+              """
                 +----+
-                |    
-                |    
-                |    
-                ===   
-                """    
-            ]
+                |    O
+                |
+                |
+                ===
+              """,
+              """
+                +----+
+                |
+                |
+                |
+                ===
+              """]
     return stages[tries]
-        
-            
 
 
-def main():
+def main_game():
     """
     Function to call all functions
     """
     answer = "YES"
     while answer.upper() == "YES":
-        enterName()   
+        enterName()
         play_hangman(randomWord())
         print("\n")
         print("\n You lose. The man is dead!")
         print("\n Do you want to play again? Yes or No")
         answer = input()
-    
-main()           
-        
+
+
+main_game()
