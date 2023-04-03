@@ -2,13 +2,14 @@ import random
 import colorama
 from colorama import Fore
 
-print('\n---------------------------------------------------------------------------------------\n')
+
+print('\n------------------------------------------------------------------------------------\n')
 print('||      ||      //\\     ||\\    ||  ||=========  ||\\    //||     //\\     ||\\    ||')
 print('||      ||     //  \\    || \\   ||  ||           || \\  // ||    //  \\    || \\   ||')
 print('||======||    //====\\   ||  \\  ||  ||   ||===|| ||  \\//  ||   //====\\   ||  \\  ||')
 print('||      ||   //      \\  ||   \\ ||  ||   ||   || ||       ||  //      \\  ||   \\ ||')
 print('||      ||  //        \\ ||    \\||  ======    || ||       || //        \\ ||    \\||')
-print('\n----------------------------------------------------------------------------------------\n')
+print('\n------------------------------------------------------------------------------------\n')
 
  # A list of words from which the random words will be chose for the game
 words = ['flower', 'nurse','house','packet','rather','zebra','human','table','laptop',
@@ -22,40 +23,39 @@ def randomWord():
     randomWord = random.choice(words)
     return randomWord.upper()
 
-def validate_name():
+def enterName():
+    """
+    Asks the player for their name and logs the name
+    """
     userName = input("Enter your name: \n")
-    if len(userName)>3 and userName.isalpha():
-        print(f"Hello {userName}")
-    
-    else:
-        print("Invalid name. Name must be more than 3 letters and in alphabets")
-        
-    return userName
-       
+    print(f"Welcome {userName} to the Hangman Game:)\n")
+    rules()
+
 def rules():
     """
     Function to display rules of the game
     """
-    playerKnowledge = input(f"Do you want to see the rules? : YES/NO \n")
-    if playerKnowledge.isalpha() and playerKnowledge.upper() == "YES":
-        print("HOW TO PLAY:-")
-        print("\nGoal: guess the word and save the man!")
-        print("Everytime you can type only one letter.")
-        print("Make 6 wrong guesses and you lose. The man will die!")
-    elif playerKnowledge.upper() == "NO":
-        print("Starting Game....")
-    else:
-        print("Invalid input")
-    return playerKnowledge
-    
-
+    while True:
+        playerKnowledge = input(f"Do you want to see the rules? : YES/NO \n")
+        if playerKnowledge.isalpha() and playerKnowledge.upper() == "YES":
+            print("HOW TO PLAY:-")
+            print("\nGoal: guess the word and save the man!")
+            print("Everytime you can type only one letter.")
+            print("Make 6 wrong guesses and you lose. The man will die!")
+            break
+        elif playerKnowledge.upper() == "NO":
+            print("Starting Game....")
+            play_hangman(randomWord)
+            break
+        else:
+            print("Invalid input. Please enter YES or NO\n")
+        
 def play_hangman(randomWord):
     """
     Function for the game which inherit randomWord from randomWord function
     """
     guessed_letters = [] # List holds the letters player guessed
     tries = 6  # Total number of tries provided to player
-    # Initial display of hangman
     print(display_hangman(tries))
 
     # While loop which will run until the tries are over
@@ -63,7 +63,7 @@ def play_hangman(randomWord):
         # Variable counting wrong input from user
         wrong_letter_count = 0
         # Input letter provided by user and returned in uppercase
-        guess = input("\n Please enter a letter: ").upper() 
+        guess = input("\n\nPlease enter a letter: ").upper() 
 
         # If/Else statement to validate the input provided by user
         if len(guess) == 1 and guess.isalpha():
@@ -83,7 +83,9 @@ def play_hangman(randomWord):
                 print(f"\n Attempt left: {tries}")
                 print(display_hangman(tries))         
         else:
-           print("\n Invalid input. Enter only one character and it must be an alphabet")
+            print("\n Invalid input. Enter only one character and it must be an alphabet")
+            print(f"\n Attempt left: {tries}")
+            print(display_hangman(tries)) 
         
         # Guess from user added in guessed_letters list
         guessed_letters.append(guess)
@@ -170,8 +172,7 @@ def main():
     """
     answer = "YES"
     while answer.upper() == "YES":
-        validate_name()
-        rules()
+        enterName()   
         play_hangman(randomWord())
         print("\n")
         print("\n You lose. The man is dead!")
