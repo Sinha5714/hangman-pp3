@@ -10,7 +10,7 @@ print(Fore.RED +'||========||     //======\\    ||   \\   ||  ||      ||====|| |
 print(Fore.GREEN +'||        ||    //        \\   ||    \\  ||  ||      ||    || ||         ||   //        \\   ||    \\  ||')
 print(Fore.RED +'||        ||   //          \\  ||     \\ ||  ||      ||    || ||         ||  //          \\  ||     \\ ||')
 print(Fore.GREEN +'||        ||  //            \\ ||      \\||  =========     || ||         || //            \\ ||      \\||')
-print(Fore.GREEN +'\n-------------------------------------------------------------------------------------------------------------------------------------------')
+print('\n-------------------------------------------------------------------------------------------------------------------------------------------')
 
  # A list of words from which the random words will be chose for the game
 words = ['flower', 'nurse','house','packet','rather','zebra','human','table','laptop','rating','notice','abroad','accept','bridge','bamboo','escape','excess','guitar','hunter','health','jumble','kitten','legacy','notice','radius','online']
@@ -78,7 +78,9 @@ def play_hangman(randomWord):
                 print(display_hangman(tries))
                 guessed_letters.append(guess)
             else:
-                print(f"Correct! There is one or more {guess} in the secret word.")         
+                print(f"Correct! There is one or more {guess} in the secret word.")
+                print(f"\n Attempt left: {tries}")
+                print(display_hangman(tries))         
         else:
            print("\n Invalid input. Enter only one character and it must be an alphabet")
         
@@ -105,26 +107,28 @@ def display_hangman(tries):
     stage and will be dependent on the tries.
     """       
     stages = [  """
+                +----+"
+                |    O 
+                |   /|\ 
+                |   / \ 
+                ===    
+                """,
+                
+                """
                 +----+
-                |    
-                |    
-                |    
-                ===   
+                |    O 
+                |   /|\ 
+                |   / 
+                ===
                 """,
                 """
                 +----+
-                |    O
-                |    
-                |    
-                ===   
+                |    O 
+                |   /|\ 
+                |      
+                ===  
                 """,
-                """
-                +----+
-                |    O
-                |    |
-                |    
-                ===   
-                """,
+                 
                 """
                 +----+
                 |    O 
@@ -134,39 +138,44 @@ def display_hangman(tries):
                 """,
                 """
                 +----+
-                |    O 
-                |   /|\ 
-                |      
-                ===    
-                """,
-                """
-                +----+
-                |    O 
-                |   /|\ 
-                |   / 
+                |    O
+                |    |
+                |    
                 ===   
                 """,
                 """
-                +----+"
-                |    O 
-                |   /|\ 
-                |   / \ 
-                ===    
-                
+                +----+    
+                |    O
+                |    
+                |    
+                ===      
+                """,
                 """
+                +----+
+                |    
+                |    
+                |    
+                ===   
+                """    
             ]
     return stages[tries]
         
             
 
-answer = "Yes"
 
-while answer == 'Yes':
-    validate_name()
-    rules()
-    play_hangman(randomWord())
-    print("\n Do you want to play again? Yes or No")
-    answer = input()
+def main():
+    """
+    Function to call all functions
+    """
+    answer = "YES"
+    while answer.upper() == "YES":
+        validate_name()
+        rules()
+        play_hangman(randomWord())
+        print("\n")
+        print("\n You lose. The man is dead!")
+        print("\n Do you want to play again? Yes or No")
+        answer = input()
     
-            
+main()           
         
