@@ -85,4 +85,18 @@ def play_hangman(randomWord):
         # Guess from user added in guessed_letters list
         guessed_letters.append(guess)
         
+        # For loop to check the value of the input and print it for display
+        for letter in randomWord:
+            if letter in guessed_letters:
+                print(f"{letter}", end = ' ')        
+            else:
+                print("_", end = ' ')
+                wrong_letter_count += 1 # Increment as the input from user is wrong
+        
+        # If wrong_letter_count is 0. Player wins        
+        if wrong_letter_count == 0:
+            print(f"\n Well Done. The secret word was {randomWord}. You saved the man:)")
+            break
+        
+            
         
