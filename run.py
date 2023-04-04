@@ -1,13 +1,8 @@
-"""
-To import random module
-"""
 import random
-
-# To import time module
 import time
-
-# To import colorama module
 from colorama import Fore
+from gsheet import validate_user_details
+from gsheet import update_login_data
 
 print(Fore.RED + "================================================")
 time.sleep(1)
@@ -36,6 +31,17 @@ def choose_random_word():
     """
     random_word = random.choice(words)
     return random_word.upper()
+
+
+def get_user_details():
+    """
+    To get username and password for the game
+    """
+    print("Sign up to play Hangman Game")
+    user_input = input("Enter Username:\n")
+    user_password = input("Enter Password: \n")
+    login = [user_input, user_password, 0]
+    update_login_data(login)
 
 
 def enter_name():
@@ -245,14 +251,15 @@ def restart_game():
         else:
             print("Invalid input. Type Y/N")
 
-
+get_user_details()
 def main_game():
     """
     Function to call all functions
     """
+    
     enter_name()
     play_hangman(choose_random_word())
     restart_game()
 
 
-main_game()
+
