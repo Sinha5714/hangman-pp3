@@ -36,9 +36,9 @@ def validate_user_details(user, password):
     entered username and password are valid
     """
     try:
-        if user == "" or password == "" or user == " " or password ==" ":
+        if len(user) < 5 or len(password) < 5:
             raise ValueError(
-                "You cannot submit empty field"
+                "Username and Password should be more than 4 characters"
             )
     except ValueError as v:
         print(f"Invalid Input: {v}")
