@@ -39,11 +39,12 @@ def get_user_details():
     """
     To get username and password for the game
     """
-    print("Sign up to play Hangman Game")
-    user_input = input("Enter Username:\n")
-    user_password = input("Enter Password: \n")
+    print("\nSign up to play Hangman Game")
+    user_input = input("\nEnter Username:\n")
+    user_password = input("\nEnter Password: \n")
     login = [user_input, user_password, 0]
     update_login_data(login)
+
 
 def user_exist():
     """
@@ -58,10 +59,11 @@ def user_exist():
         for data in logins:
             if username == data['USERNAME']:
                 if password == data['PASSWORD']:
-                    print("Login Sucessfully...")
+                    print("\nLogin Sucessfully...")
                     current_user['name'] = data['USERNAME']
-                    print(f"Welcome back {current_user['name']}")
+                    print(f"\nWelcome back {current_user['name']}")
                     open_rules()
+                    play_hangman(choose_random_word())
                 else:
                     print("Incorrect password...")
                     user_exist()
@@ -76,14 +78,13 @@ def user_exist():
         print("Invalid input. Type Y/N")
 
 
-
 def open_rules():
     """
     Contains a while loop to ask question to open rules
     """
     # Loop to ask the same question if there is an error
     while True:
-        show_rules = input(Fore.CYAN + "Want to open Rules: Y/N \n")
+        show_rules = input(Fore.CYAN + "\nWant to open Rules: Y/N \n")
         if show_rules.isalpha() and show_rules.upper() == "Y":
             print(f"{Fore.GREEN}\nLoading Rules......")
             time.sleep(2)
@@ -271,10 +272,8 @@ def main_game():
     """
     Function to call all functions
     """
-    get_user_details()
-    enter_name()
-    play_hangman(choose_random_word())
+    user_exist()
     restart_game()
 
 
-user_exist()
+main_game()
