@@ -1,7 +1,6 @@
 import random
 import time
 from colorama import Fore
-from gsheet import validate_user_details
 from gsheet import update_login_data
 
 print(Fore.RED + "================================================")
@@ -251,15 +250,15 @@ def restart_game():
         else:
             print("Invalid input. Type Y/N")
 
-get_user_details()
+
 def main_game():
     """
     Function to call all functions
     """
-    
+    get_user_details()
     enter_name()
     play_hangman(choose_random_word())
     restart_game()
 
 
-
+main_game()
