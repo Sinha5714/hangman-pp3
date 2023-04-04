@@ -86,6 +86,9 @@ def how_to_play():
     time.sleep(0.5)
     print(f"{Fore.YELLOW}\nEverytime you can type only one letter.")
     time.sleep(0.5)
+    print(f"{Fore.YELLOW}\nFor increasing chances of winning:")
+    print(f"{Fore.YELLOW}letters 'AEIOU' is already provided ")
+    time.sleep(0.5)
     print(f"{Fore.YELLOW}\nMake 6 wrong guesses and you lose.")
     time.sleep(0.5)
     print(f"{Fore.YELLOW}\nThe man will die!")
@@ -98,8 +101,6 @@ def play_hangman(random_word):
     """
     Function for the game which inherit randomWord from randomWord function
     """
-    word_length = " _ " * len(random_word)
-
     # List holds the letters player guessed
     guessed_letters = "AEIOU"
 
@@ -112,6 +113,7 @@ def play_hangman(random_word):
 
     # While loop which will run until the tries are over
     while tries > 0:
+
         # Variable counting wrong input from user
         wrong_letter_count = 0
 
@@ -150,14 +152,15 @@ def play_hangman(random_word):
             print(Fore.WHITE + display_hangman(tries))
             print(f"{Fore.RED}\n Attempt left: {tries}\n")
 
-        # Add guess to guessed_letters
+        # Add guess to guessed letters
         guessed_letters += guess
-
+        
         # If wrong_letter_count is 0. Player wins and the loop breaks
         if wrong_letter_count == 0:
             print(f"{Fore.GREEN}\nCongrats. The secret word is {random_word}.")
             print("\nYou saved the man:)")
             break
+        
         # If tries is 0. It prints the player lost message
         elif tries == 0:
             print(f" You lose. The secret word was {random_word}.\n")
@@ -171,7 +174,7 @@ def display_hangman(tries):
     """
     stages = [
         """
-        +----+"
+        +----+
         |    O
         |   /|\\
         |   / \\
