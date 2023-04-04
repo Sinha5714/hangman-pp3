@@ -23,21 +23,11 @@ def login_data():
     return user_login
 
 
-def user_result():
-    """
-    Gets user results and adds to the result worksheet
-    """
-    result = RESULT.get_all_values()
-    return result 
-
 def get_user_details():
     """
-    To get username for the game
+    To get username and password for the game
     """
     user_login = input("Enter your username:\n")
     user_password = input("Enter your password:\n")
-    print(user_login)
-    print(user_password)
-
-
+    
 get_user_details()
