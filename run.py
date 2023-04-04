@@ -2,6 +2,9 @@ import random
 import time
 from colorama import Fore
 from gsheet import update_login_data
+from gsheet import login_data
+
+current_user = {'name': 'Remo'}
 
 print(Fore.RED + "================================================")
 time.sleep(1)
@@ -42,23 +45,36 @@ def get_user_details():
     login = [user_input, user_password, 0]
     update_login_data(login)
 
+def user_exist():
+    """
+    To check if user is already signed up
+    """
+    check = input("Are you already signed in: Y/N \n")
+    if check.upper() == "Y":
+        username = input(Fore.CYAN + "\nEnter your name: \n")
+        password = input(Fore.CYAN + "\nEnter your password: \n")
+        logins = login_data()
+        check_login = 0
+        for data in logins:
+            if username == data['USERNAME']:
+                if password == data['PASSWORD']:
+                    print("Login Sucessfully...")
+                    current_user['name'] = data['USERNAME']
+                    print(f"Welcome back {current_user['name']}")
+                    open_rules()
+                else:
+                    print("Incorrect password...")
+                    user_exist()
+            else:
+                check_login += 1
+        if check_login == len(logins):
+            print("User do not exist.Try again")
+            user_exist()
+    elif check.upper() == "N":
+        get_user_details()
+    else:
+        print("Invalid input. Type Y/N")
 
-def enter_name():
-    """
-    Asks the player for their name and logs the name in uppercase
-    and validate the name if less than 3 characters
-    """
-    # Loop to validate entered username
-    while True:
-        username = input(Fore.CYAN + "\nEnter your name: \n").upper()
-        if len(username) > 3:
-            time.sleep(1)
-            print(f"{Fore.GREEN}\nWelcome {username} to the Hangman Game:)\n")
-            time.sleep(1.5)
-            open_rules()
-            break
-        else:
-            print("Invalid input. Name should be more than 3 characters")
 
 
 def open_rules():
@@ -261,4 +277,4 @@ def main_game():
     restart_game()
 
 
-main_game()
+user_exist()
