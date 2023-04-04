@@ -17,7 +17,7 @@ print(Fore.BLUE + "||   || //     \\||  \\|| ||__|| || ||      |")
 time.sleep(1.5)
 print(Fore.BLUE + "==================================||      O ")
 print(Fore.BLUE + "   ||\\  //||  // \\  ||\\  ||       ||     /|\ ")
-print(Fore.BLUE + "   || \\// || //===\\ || \\ ||       ||     /|\ ")
+print(Fore.BLUE + "   || \\// || //===\\ || \\ ||       ||     / \ ")
 print(Fore.BLUE + "   ||     ||//     \\||  \\||       ||==== ")
 time.sleep(1)
 print(Fore.RED + "================================================")
@@ -61,9 +61,9 @@ def open_rules():
     """
     # Loop to ask the same question if there is an error
     while True:
-        show_rules = input(Fore.RED+"Want to open Rules: Y/N \n")
+        show_rules = input(Fore.BLUE + "Want to open Rules: Y/N \n")
         if show_rules.isalpha() and show_rules.upper() == "Y":
-            print("Loading Rules......")
+            print(f"{Fore.GREEN}\nLoading Rules......")
             time.sleep(2)
             how_to_play()
             break
@@ -108,7 +108,7 @@ def play_hangman(random_word):
     # Initial display of hangman game
     print(Fore.WHITE + display_hangman(tries))
     print(f"{Fore.RED}\nAttempt left: {tries}\n")
-    print(word_length)
+    print(Fore.WHITE + word_length)
 
     # While loop which will run until the tries are over
     while tries > 0:
@@ -116,7 +116,7 @@ def play_hangman(random_word):
         wrong_letter_count = 0
 
         # Input letter provided by user and returned in uppercase
-        guess = input("\n\n Please enter a letter: ").upper()
+        guess = input(f"{Fore.LIGHTYELLOW_EX}\n\n Please enter a letter: ").upper()
 
         # If/Else statement to validate the input provided by user
         if len(guess) == 1 and guess.isalpha():
@@ -169,55 +169,56 @@ def display_hangman(tries):
     Function to display various stages of hangman game. It consist of array
     holding different stages and will be dependent on the tries.
     """   
-    stages = ["""
-                +----+"
-                |    O
-                |   /|\ 
-                |   / \ 
-                ===
-              """,
-              """
-                +----+
-                |    O
-                |   /|\ 
-                |   /
-                ===
-              """,
-              """
-                +----+
-                |    O
-                |   /|\ 
-                |
-                ===
-              """,
-              """
-                +----+
-                |    O
-                |   /|
-                |
-                ===
-              """,
-              """
-                +----+
-                |    O
-                |    |
-                |
-                ===
-              """,
-              """
-                +----+
-                |    O
-                |
-                |
-                ===
-              """,
-              """
-                +----+
-                |
-                |
-                |
-                ===
-              """]
+    stages = [
+        """
+        +----+"
+        |    O
+        |   /|\ 
+        |   / \ 
+        ===
+        """,
+        """
+        +----+
+        |    O
+        |   /|\ 
+        |   /
+        ===
+        """,
+        """
+        +----+
+        |    O
+        |   /|\ 
+        |
+        ===
+        """,
+        """
+        +----+
+        |    O
+        |   /|
+        |
+        ===
+        """,
+        """
+        +----+
+        |    O
+        |    |
+        |
+        ===
+        """,
+        """
+        +----+
+        |    O
+        |
+        |
+        ===
+        """,
+        """
+        +----+
+        |
+        |
+        |
+        ===
+        """]
     return stages[tries]
 
 def restart_game():
@@ -228,14 +229,14 @@ def restart_game():
     while True:
         answer = input("\nDo you want to play again?: Y/N\n")
         if answer.upper() == "Y":
-            print("TRY YOUR LUCK AGAIN!!")
-            print("Restarting Game......")
+            print(f"{Fore.CYAN}\nTRY YOUR LUCK AGAIN!!")
+            print(f"{Fore.GREEN}\nRestarting Game......")
             time.sleep(2.5)
             enter_name()
             play_hangman(choose_random_word())
         elif answer.upper() == "N":
             time.sleep(1.5)
-            print("Good Bye!!")
+            print(f"{Fore.LIGHTCYAN_EX}\nGood Bye!!")
             break
         else:
             print("Invalid input. Type Y/N")
