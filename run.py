@@ -2,17 +2,24 @@
 To import random module
 """
 import random
+
+# To import time module
+import time
+
 # To import colorama module
 from colorama import Fore
 
 print(Fore.RED + "================================================")
+time.sleep(1)
 print(Fore.BLUE + "||   ||   // \\  ||\\  || ||====    ||========   ")
 print(Fore.BLUE + "||===||  //===\\ || \\ || ||  ||=|| ||      | ")
 print(Fore.BLUE + "||   || //     \\||  \\|| ||==|| || ||      |")
+time.sleep(1.5)
 print(Fore.BLUE + "==================================||      O ")
 print(Fore.BLUE + "   ||\\  //||  // \\  ||\\  ||       ||     /|\ ")
 print(Fore.BLUE + "   || \\// || //===\\ || \\ ||       ||     /|\ ")
 print(Fore.BLUE + "   ||     ||//     \\||  \\||       ||==== ")
+time.sleep(1)
 print(Fore.RED + "================================================")
 
 # A list of words from which the random words will be chose for the game
@@ -33,12 +40,12 @@ def choose_random_word():
 
 def enter_name():
     """
-    Asks the player for their name and logs the name and validate
-    the name if less than 3 characters
+    Asks the player for their name and logs the name in uppercase 
+    and validate the name if less than 3 characters
     """
     # Loop to validate entered username
     while True:
-        username = input(Fore.CYAN + "Enter your name: \n")
+        username = input(Fore.CYAN + "\nEnter your name: \n").upper()
         if len(username) > 3:
             print(f"{Fore.GREEN}\nWelcome {username} to the Hangman Game:)\n")
             open_rules()
@@ -54,6 +61,7 @@ def open_rules():
     while True:
         show_rules = input(Fore.RED+"Open Rules: Y/N \n")
         if show_rules.isalpha() and show_rules.upper() == "Y":
+            print("Loading Rules......")
             how_to_play()
             break
         elif show_rules.upper() == "N":
@@ -79,6 +87,7 @@ def play_hangman(random_word):
     Function for the game which inherit randomWord from randomWord function
     """
     word_length = " _ " * len(random_word)
+
     # List holds the letters player guessed
     guessed_letters = []
 
@@ -95,31 +104,31 @@ def play_hangman(random_word):
         wrong_letter_count = 0
 
         # Input letter provided by user and returned in uppercase
-        guess = input("\n\nPlease enter a letter: ").upper()
+        guess = input("\n\n Please enter a letter: ").upper()
 
         # If/Else statement to validate the input provided by user
         if len(guess) == 1 and guess.isalpha():
             # If/Else statement to check the letter was already guessed by user
-            if guess in guessed_letters:
-                print(f"{Fore.YELLOW}\n{guess} is already guessed!")
-                print(display_hangman(tries))
-                print(f"{Fore.RED}\n Attempt left: {tries}")
-            elif guess not in random_word:
+            if guess not in random_word:
                 print(Fore.RED + "\n You guessed wrong. Try Again")
                 # Reduce by one with each wrong guess
                 tries -= 1
                 print(Fore.RED + display_hangman(tries))
                 print(f"{Fore.RED}\n Attempt left: {tries}")
                 guessed_letters.append(guess)
+            elif guess in guessed_letters:
+                print(f"{Fore.YELLOW}\n{guess} is already guessed!")
+                print(display_hangman(tries))
+                print(f"{Fore.RED}\n Attempt left: {tries}")
             else:
-                print(f"{Fore.GREEN}\nCorrect! {guess} is in the word.")
+                print(f"{Fore.GREEN}\n Correct! {guess} is in the word.")
                 print(f"{Fore.RED}\n Attempt left: {tries}")
                 print(Fore.RED + display_hangman(tries))
         else:
             print(Fore.RED + "\n Invalid input. Enter only one letter")
             print(Fore.RED + display_hangman(tries))
             print(f"{Fore.RED}\n Attempt left: {tries}")
-            
+    
         # Guess from user added in guessed_letters list
         guessed_letters.append(guess)
 
