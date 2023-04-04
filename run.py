@@ -11,7 +11,7 @@ from colorama import Fore
 
 print(Fore.RED + "================================================")
 time.sleep(1)
-print(Fore.BLUE + "||   ||   // \\  ||\\  || ||====    ||========   ")
+print(Fore.BLUE + "||   ||   // \\  ||\\  || ||¯¯¯¯    ||========   ")
 print(Fore.BLUE + "||===||  //===\\ || \\ || ||  ||=|| ||      | ")
 print(Fore.BLUE + "||   || //     \\||  \\|| ||__|| || ||      |")
 time.sleep(1.5)
