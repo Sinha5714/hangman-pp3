@@ -20,12 +20,47 @@ def login_data():
     """
     users_login = USERS.get_all_records()
     return users_login
-
+    
 
 def update_login_data(data):
     """
     Update users worksheet with new username and
     password data
-    """
+    """ 
     USERS.append_row(data)
-    
+
+
+def validate_user_details(user, password):
+    """
+    Function to check if username already exist and
+    entered username and password are valid
+    """
+    try:
+        if user == "" or password == "" or user == " " or password ==" ":
+            raise ValueError(
+                "You cannot submit empty field"
+            )
+    except ValueError as v:
+        print(f"Invalid Input: {v}")
+        return False
+    try:
+        existing_user = login_data()
+        for ind in existing_user:
+            if ind["USERNAME"] == user:
+                raise ValueError(
+                    "Username already exist"
+                )
+    except ValueError as e:
+        print(f"Invalid Username: {e}")
+        return False
+    try:
+        if not (isinstance(user, str) or isinstance(password, str)):
+            raise TypeError(
+                "Enter details in alphabets only"
+            )
+    except TypeError as m:
+        print(f"Invalid user input: {m}")
+        return False
+    else:
+        print("Login confirmed....")
+        return True

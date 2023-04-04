@@ -3,6 +3,7 @@ import time
 from colorama import Fore
 from gsheet import update_login_data
 from gsheet import login_data
+from gsheet import validate_user_details
 
 current_user = {'name': 'Remo'}
 
@@ -42,8 +43,12 @@ def get_user_details():
     print("\nSign up to play Hangman Game")
     user_input = input("\nEnter Username:\n")
     user_password = input("\nEnter Password: \n")
-    login = [user_input, user_password, 0]
-    update_login_data(login)
+    validate = validate_user_details(user_input, user_password)
+    if validate:
+        login = [user_input, user_password]
+        update_login_data(login)
+    else:
+        get_user_details()
 
 
 def user_exist():
@@ -274,6 +279,5 @@ def main_game():
     """
     user_exist()
     restart_game()
-
 
 main_game()
