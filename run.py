@@ -40,7 +40,7 @@ def choose_random_word():
 
 def enter_name():
     """
-    Asks the player for their name and logs the name in uppercase 
+    Asks the player for their name and logs the name in uppercase
     and validate the name if less than 3 characters
     """
     # Loop to validate entered username
@@ -53,7 +53,8 @@ def enter_name():
             open_rules()
             break
         else:
-            print("Invalid input. Name should be more than 3 characters")     
+            print("Invalid input. Name should be more than 3 characters")
+
 
 def open_rules():
     """
@@ -108,7 +109,7 @@ def play_hangman(random_word):
     # Initial display of hangman game
     print(Fore.WHITE + display_hangman(tries))
     print(f"{Fore.RED}\nAttempt left: {tries}\n")
-    
+
     # While loop which will run until the tries are over
     while tries > 0:
         # Variable counting wrong input from user
@@ -150,7 +151,7 @@ def play_hangman(random_word):
             print(Fore.RED + "\n Invalid input. Enter only one alphabet")
             print(Fore.WHITE + display_hangman(tries))
             print(f"{Fore.RED}\n Attempt left: {tries}\n")
-    
+
         # If wrong_letter_count is 0. Player wins and the loop breaks
         if wrong_letter_count == 0:
             print(f"{Fore.GREEN}\nCongrats. The secret word is {random_word}.")
@@ -166,7 +167,7 @@ def display_hangman(tries):
     """
     Function to display various stages of hangman game. It consist of array
     holding different stages and will be dependent on the tries.
-    """   
+    """
     stages = [
         """
         +----+"
@@ -219,6 +220,7 @@ def display_hangman(tries):
         """]
     return stages[tries]
 
+
 def restart_game():
     """
     Function to ask user if they want to play again
@@ -238,7 +240,7 @@ def restart_game():
             break
         else:
             print("Invalid input. Type Y/N")
- 
+
 
 def main_game():
     """
