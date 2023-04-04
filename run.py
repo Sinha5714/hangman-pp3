@@ -100,7 +100,7 @@ def play_hangman(random_word):
     word_length = " _ " * len(random_word)
 
     # List holds the letters player guessed
-    guessed_letters = []
+    guessed_letters = "AEIOU"
 
     # Total number of tries provided to player
     tries = 6
@@ -108,42 +108,11 @@ def play_hangman(random_word):
     # Initial display of hangman game
     print(Fore.WHITE + display_hangman(tries))
     print(f"{Fore.RED}\nAttempt left: {tries}\n")
-    print(Fore.WHITE + word_length)
-
+    
     # While loop which will run until the tries are over
     while tries > 0:
         # Variable counting wrong input from user
         wrong_letter_count = 0
-
-        # Input letter provided by user and returned in uppercase
-        guess = input(f"{Fore.LIGHTYELLOW_EX}\n\n Please enter a letter: ").upper()
-
-        # If/Else statement to validate the input provided by user
-        if len(guess) == 1 and guess.isalpha():
-            # If/Else statement to check the letter was already guessed by user
-            if guess not in random_word:
-                print(f"{Fore.RED}\n You guessed wrong. Try Again")
-                # Reduce by one with each wrong guess
-                tries -= 1
-                print(Fore.WHITE + display_hangman(tries))
-                print(f"{Fore.RED}\n Attempt left: {tries}\n")
-                guessed_letters.append(guess)
-            elif guess in guessed_letters:
-                print(f"{Fore.YELLOW}\n{guess} is already guessed!")
-                print(Fore.WHITE + display_hangman(tries))
-                print(f"{Fore.RED}\n Attempt left: {tries}\n")
-            else:
-                print(f"{Fore.GREEN}\n Correct! {guess} is in the word.")
-                print(Fore.WHITE + display_hangman(tries))
-                print(f"{Fore.RED}\n Attempt left: {tries}\n")
-                
-        else:
-            print(Fore.RED + "\n Invalid input. Enter only one alphabet")
-            print(Fore.WHITE + display_hangman(tries))
-            print(f"{Fore.RED}\n Attempt left: {tries}\n")
-    
-        # Guess from user added in guessed_letters list
-        guessed_letters.append(guess)
 
         # For loop to check the value of the input and print it for display
         for letter in random_word:
@@ -154,13 +123,42 @@ def play_hangman(random_word):
                 # Increment as the input from user is wrong
                 wrong_letter_count += 1
 
+        # Input letter provided by user and returned in uppercase
+        guess = input(f"{Fore.YELLOW}\n\n Please enter a letter: ").upper()
+
+        # If/Else statement to validate the input provided by user
+        if len(guess) == 1 and guess.isalpha():
+            # If/Else statement to check the letter was already guessed by user
+            if guess not in random_word:
+                print(f"{Fore.RED}\n You guessed wrong. Try Again")
+                # Reduce by one with each wrong guess
+                tries -= 1
+                print(Fore.WHITE + display_hangman(tries))
+                print(f"{Fore.RED}\n Attempt left: {tries}\n")
+                guessed_letters += guess
+            elif guess in guessed_letters:
+                print(f"{Fore.YELLOW}\n{guess} is already guessed!")
+                print(Fore.WHITE + display_hangman(tries))
+                print(f"{Fore.RED}\n Attempt left: {tries}\n")
+                guessed_letters += guess
+            else:
+                print(f"{Fore.GREEN}\n Correct! {guess} is in the word.")
+                print(Fore.WHITE + display_hangman(tries))
+                print(f"{Fore.RED}\n Attempt left: {tries}\n")
+                guessed_letters += guess
+        else:
+            print(Fore.RED + "\n Invalid input. Enter only one alphabet")
+            print(Fore.WHITE + display_hangman(tries))
+            print(f"{Fore.RED}\n Attempt left: {tries}\n")
+    
         # If wrong_letter_count is 0. Player wins and the loop breaks
         if wrong_letter_count == 0:
-            print(f"\n\nWell Done. The secret word is {random_word}.\n")
-            print("You saved the man:)")
+            print(f"{Fore.GREEN}\nCongrats. The secret word is {random_word}.")
+            print("\nYou saved the man:)")
             break
+        # If tries is 0. It prints the player lost message
         elif tries == 0:
-            print(f"\n\n You lose. The secret word was {random_word}.\n")
+            print(f" You lose. The secret word was {random_word}.\n")
     return tries
 
 
