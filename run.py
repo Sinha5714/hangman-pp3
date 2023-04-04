@@ -72,13 +72,13 @@ def how_to_play():
     print(f"{Fore.YELLOW}\nEverytime you can type only one letter.")
     print(f"{Fore.YELLOW}\nMake 6 wrong guesses and you lose.")
     print(f"{Fore.YELLOW}\nThe man will die!")
-    close_rule()
 
 
 def play_hangman(random_word):
     """
     Function for the game which inherit randomWord from randomWord function
     """
+    word_length = " _ " * len(random_word)
     # List holds the letters player guessed
     guessed_letters = []
 
@@ -87,6 +87,7 @@ def play_hangman(random_word):
 
     # Initial display of hangman game
     print(Fore.RED + display_hangman(tries))
+    print(word_length)
 
     # While loop which will run until the tries are over
     while tries > 0:
@@ -127,10 +128,10 @@ def play_hangman(random_word):
             if letter in guessed_letters:
                 print(f"{letter}", end=' ')
             else:
-                print("_", end=' ')
+                print(" _ ", end=' ')
                 # Increment as the input from user is wrong
                 wrong_letter_count += 1
-                
+
         # If wrong_letter_count is 0. Player wins and the loop breaks
         if wrong_letter_count == 0:
             print(f"\n Well Done. The secret word was {random_word}.\n")
