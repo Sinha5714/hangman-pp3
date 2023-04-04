@@ -126,7 +126,7 @@ def play_hangman(random_word):
 
         # Input letter provided by user and returned in uppercase
         guess = input(f"{Fore.YELLOW}\n\n Please enter a letter: ").upper()
-        
+
         # If/Else statement to validate the input provided by user
         if len(guess) == 1 and guess.isalpha():
             # If/Else statement to check the letter was already guessed by user
