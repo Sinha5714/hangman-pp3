@@ -23,7 +23,7 @@ words = ['flower', 'nurse', 'house', 'packet', 'rather', 'zebra',
          'legacy', 'notice', 'radius', 'online']
 
 
-def randomWord():
+def random_word():
     """
     Select random word from list words and return in upper case
     """
@@ -31,26 +31,33 @@ def randomWord():
     return randomWord.upper()
 
 
-def enterName():
+def enter_name():
     """
-    Asks the player for their name and logs the name
+    Asks the player for their name and logs the name and validate
+    the name if less than 3 characters
     """
-    userName = input(Fore.CYAN + "Enter your name: \n")
-    print(f"{Fore.GREEN}\nWelcome {userName} to the Hangman Game:)\n")
-    rules()
+    # Loop to validate entered username
+    while True:
+        userName = input(Fore.CYAN + "Enter your name: \n")
+        if len(userName) > 3:
+            print(f"{Fore.GREEN}\nWelcome {userName} to the Hangman Game:)\n")
+            open_rules()
+            break
+        else:
+            print("Invalid input. Name should be more than 3 characters")     
 
 
-def rules():
+def open_rules():
     """
     Contains a while loop to ask question to open rules
     """
     # Loop to ask the same question if there is an error
     while True:
-        playerKnowledge = input(Fore.RED+"Open Rules: Y/N \n")
-        if playerKnowledge.isalpha() and playerKnowledge.upper() == "Y":
+        showRules = input(Fore.RED+"Open Rules: Y/N \n")
+        if showRules.isalpha() and showRules.upper() == "Y":
             how_to_play()
             break
-        elif playerKnowledge.upper() == "N":
+        elif showRules.upper() == "N":
             print(f"{Fore.GREEN}\nStarting Game....\n")
             break
         else:
@@ -193,8 +200,8 @@ def main_game():
     """
     answer = "YES"
     while answer.upper() == "YES":
-        enterName()
-        play_hangman(randomWord())
+        enter_name()
+        play_hangman(random_word())
         print("\n")
         print("\n You lose. The man is dead!")
         print("\n Do you want to play again? Yes or No")
