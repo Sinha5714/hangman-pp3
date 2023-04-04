@@ -150,6 +150,9 @@ def play_hangman(random_word):
             print(Fore.WHITE + display_hangman(tries))
             print(f"{Fore.RED}\n Attempt left: {tries}\n")
 
+        # Add guess to guessed_letters
+        guessed_letters += guess
+
         # If wrong_letter_count is 0. Player wins and the loop breaks
         if wrong_letter_count == 0:
             print(f"{Fore.GREEN}\nCongrats. The secret word is {random_word}.")
