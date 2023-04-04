@@ -28,14 +28,6 @@ words = ['flower', 'nurse', 'house', 'packet', 'rather', 'zebra',
          'legacy', 'notice', 'radius', 'online']
 
 
-def choose_random_word():
-    """
-    Select random word from list words and return in upper case
-    """
-    random_word = random.choice(words)
-    return random_word.upper()
-
-
 def get_user_details():
     """
     To get username and password for the game
@@ -83,6 +75,14 @@ def user_exist():
         print("Invalid input. Type Y/N")
 
 
+def choose_random_word():
+    """
+    Select random word from list words and return in upper case
+    """
+    random_word = random.choice(words)
+    return random_word.upper()
+
+
 def open_rules():
     """
     Contains a while loop to ask question to open rules
@@ -128,44 +128,29 @@ def play_hangman(random_word):
     """
     Function for the game which inherit randomWord from randomWord function
     """
-    # List holds the letters player guessed
     guessed_letters = "AEIOU"
-
-    # Total number of tries provided to player
     tries = 6
-
-    # Initial display of hangman game
     print(Fore.WHITE + display_hangman(tries))
     print(f"{Fore.RED}\nAttempt left: {tries}\n")
 
-    # While loop which will run until the tries are over
     while tries > 0:
-
-        # Variable counting wrong input from user
         wrong_letter_count = 0
-
-        # For loop to check the value of the input and print it for display
         for letter in random_word:
             if letter in guessed_letters:
                 print(f"{Fore.GREEN}{letter}", end=' ')
             else:
                 print(Fore.RED + " _ ", end=' ')
-                # Increment as the input from user is wrong
                 wrong_letter_count += 1
 
         # Input letter provided by user and returned in uppercase
         guess = input(f"{Fore.YELLOW}\n\n Please enter your guess: ").upper()
-
-        # If/Else statement to validate the input provided by user
         if len(guess) == 1 and guess.isalpha():
-            # If/Else statement to check the letter was already guessed by user
             if guess in guessed_letters:
                 print(f"{Fore.YELLOW}\n{guess} is already guessed!")
                 print(Fore.WHITE + display_hangman(tries))
                 print(f"{Fore.RED}\n Attempt left: {tries}\n")
             elif guess not in random_word:
                 print(f"{Fore.RED}\n You guessed wrong. Try Again")
-                # Reduce by one with each wrong guess
                 tries -= 1
                 guessed_letters += guess
                 print(Fore.WHITE + display_hangman(tries))
@@ -178,19 +163,14 @@ def play_hangman(random_word):
             print(Fore.RED + "\n Invalid input. Enter only one alphabet")
             print(Fore.WHITE + display_hangman(tries))
             print(f"{Fore.RED}\n Attempt left: {tries}\n")
-
-        # Add guess to guessed letters
         guessed_letters += guess
 
-        # If wrong_letter_count is 0. Player wins and the loop breaks
         if wrong_letter_count == 0:
             print(f"{Fore.GREEN}\nCongrats. The secret word is {random_word}.")
             print("\nYou saved the man:)")
             break
-        # If tries is 0. It prints the player lost message
         elif tries == 0:
             print(f" You lose. The secret word was {random_word}.\n")
-
     return tries
 
 
