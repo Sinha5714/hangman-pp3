@@ -72,6 +72,7 @@ def how_to_play():
     print(f"{Fore.YELLOW}\nEverytime you can type only one letter.")
     print(f"{Fore.YELLOW}\nMake 6 wrong guesses and you lose.")
     print(f"{Fore.YELLOW}\nThe man will die!")
+    close_rule()
 
 
 def play_hangman(random_word):
@@ -80,6 +81,7 @@ def play_hangman(random_word):
     """
     # List holds the letters player guessed
     guessed_letters = []
+
     # Total number of tries provided to player
     tries = 6
 
@@ -105,8 +107,8 @@ def play_hangman(random_word):
                 print(Fore.RED + "\n You guessed wrong. Try Again")
                 # Reduce by one with each wrong guess
                 tries -= 1
-                print(f"{Fore.RED}\n Attempt left: {tries}")
                 print(Fore.RED + display_hangman(tries))
+                print(f"{Fore.RED}\n Attempt left: {tries}")
                 guessed_letters.append(guess)
             else:
                 print(f"{Fore.GREEN}\nCorrect! {guess} is in the word.")
@@ -114,9 +116,9 @@ def play_hangman(random_word):
                 print(Fore.RED + display_hangman(tries))
         else:
             print(Fore.RED + "\n Invalid input. Enter only one letter")
-            print(f"{Fore.RED}\n Attempt left: {tries}")
             print(Fore.RED + display_hangman(tries))
-
+            print(f"{Fore.RED}\n Attempt left: {tries}")
+            
         # Guess from user added in guessed_letters list
         guessed_letters.append(guess)
 
@@ -128,6 +130,7 @@ def play_hangman(random_word):
                 print("_", end=' ')
                 # Increment as the input from user is wrong
                 wrong_letter_count += 1
+                
         # If wrong_letter_count is 0. Player wins and the loop breaks
         if wrong_letter_count == 0:
             print(f"\n Well Done. The secret word was {random_word}.\n")
@@ -140,7 +143,7 @@ def display_hangman(tries):
     """
     Function to display various stages of hangman game. It consist of array
     holding different stages and will be dependent on the tries.
-    """     
+    """   
     stages = ["""
                 +----+"
                 |    O
