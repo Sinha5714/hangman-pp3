@@ -62,7 +62,7 @@ def open_rules():
     """
     # Loop to ask the same question if there is an error
     while True:
-        show_rules = input(Fore.BLUE + "Want to open Rules: Y/N \n")
+        show_rules = input(Fore.CYAN + "Want to open Rules: Y/N \n")
         if show_rules.isalpha() and show_rules.upper() == "Y":
             print(f"{Fore.GREEN}\nLoading Rules......")
             time.sleep(2)
