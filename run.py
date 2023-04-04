@@ -23,12 +23,12 @@ words = ['flower', 'nurse', 'house', 'packet', 'rather', 'zebra',
          'legacy', 'notice', 'radius', 'online']
 
 
-def random_word():
+def choose_random_word():
     """
     Select random word from list words and return in upper case
     """
-    randomWord = random.choice(words)
-    return randomWord.upper()
+    random_word = random.choice(words)
+    return random_word.upper()
 
 
 def enter_name():
@@ -38,14 +38,13 @@ def enter_name():
     """
     # Loop to validate entered username
     while True:
-        userName = input(Fore.CYAN + "Enter your name: \n")
-        if len(userName) > 3:
-            print(f"{Fore.GREEN}\nWelcome {userName} to the Hangman Game:)\n")
+        username = input(Fore.CYAN + "Enter your name: \n")
+        if len(username) > 3:
+            print(f"{Fore.GREEN}\nWelcome {username} to the Hangman Game:)\n")
             open_rules()
             break
         else:
             print("Invalid input. Name should be more than 3 characters")     
-
 
 def open_rules():
     """
@@ -53,11 +52,11 @@ def open_rules():
     """
     # Loop to ask the same question if there is an error
     while True:
-        showRules = input(Fore.RED+"Open Rules: Y/N \n")
-        if showRules.isalpha() and showRules.upper() == "Y":
+        show_rules = input(Fore.RED+"Open Rules: Y/N \n")
+        if show_rules.isalpha() and show_rules.upper() == "Y":
             how_to_play()
             break
-        elif showRules.upper() == "N":
+        elif show_rules.upper() == "N":
             print(f"{Fore.GREEN}\nStarting Game....\n")
             break
         else:
@@ -75,7 +74,7 @@ def how_to_play():
     print(f"{Fore.YELLOW}\nThe man will die!")
 
 
-def play_hangman(randomWord):
+def play_hangman(random_word):
     """
     Function for the game which inherit randomWord from randomWord function
     """
@@ -99,10 +98,10 @@ def play_hangman(randomWord):
         if len(guess) == 1 and guess.isalpha():
             # If/Else statement to check the letter was already guessed by user
             if guess in guessed_letters:
-                print(f"{Fore.YELLOW}\n{guess} is alraedy guessed!")
+                print(f"{Fore.YELLOW}\n{guess} is already guessed!")
                 print(display_hangman(tries))
                 print(f"{Fore.RED}\n Attempt left: {tries}")
-            elif guess not in randomWord:
+            elif guess not in random_word:
                 print(Fore.RED + "\n You guessed wrong. Try Again")
                 # Reduce by one with each wrong guess
                 tries -= 1
@@ -122,7 +121,7 @@ def play_hangman(randomWord):
         guessed_letters.append(guess)
 
         # For loop to check the value of the input and print it for display
-        for letter in randomWord:
+        for letter in random_word:
             if letter in guessed_letters:
                 print(f"{letter}", end=' ')
             else:
@@ -131,7 +130,7 @@ def play_hangman(randomWord):
                 wrong_letter_count += 1
         # If wrong_letter_count is 0. Player wins and the loop breaks
         if wrong_letter_count == 0:
-            print(f"\n Well Done. The secret word was {randomWord}.\n")
+            print(f"\n Well Done. The secret word was {random_word}.\n")
             print("You saved the man:)")
             break
     return tries
@@ -145,21 +144,21 @@ def display_hangman(tries):
     stages = ["""
                 +----+"
                 |    O
-                |   /|\
-                |   / \
+                |   /|\ 
+                |   / \ 
                 ===
               """,
               """
                 +----+
                 |    O
-                |   /|\
+                |   /|\ 
                 |   /
                 ===
               """,
               """
                 +----+
                 |    O
-                |   /|\
+                |   /|\ 
                 |
                 ===
               """,
@@ -193,19 +192,32 @@ def display_hangman(tries):
               """]
     return stages[tries]
 
+def restart_game():
+    """
+    Function to ask user if they want to play again
+    and restart the game and if not exit the terminal
+    """
+    while True:
+        answer = input("\nDo you want to play again?: Y/N\n")
+        if answer.upper() == "Y":
+            print("Restarting Game......")
+            print("TRY YOUR LUCK AGAIN!!")
+            enter_name()
+            play_hangman(choose_random_word())
+        elif answer.upper() == "N":
+            print("Good Bye!!")
+            break
+        else:
+            print("Invalid input. Type Y/N")
+ 
 
 def main_game():
     """
     Function to call all functions
     """
-    answer = "YES"
-    while answer.upper() == "YES":
-        enter_name()
-        play_hangman(random_word())
-        print("\n")
-        print("\n You lose. The man is dead!")
-        print("\n Do you want to play again? Yes or No")
-        answer = input()
+    enter_name()
+    play_hangman(choose_random_word())
+    restart_game()
 
 
 main_game()
