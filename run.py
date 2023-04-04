@@ -127,7 +127,7 @@ def play_hangman(random_word):
                 wrong_letter_count += 1
 
         # Input letter provided by user and returned in uppercase
-        guess = input(f"{Fore.YELLOW}\n\n Please enter a letter: ").upper()
+        guess = input(f"{Fore.YELLOW}\n\n Please enter your guess: ").upper()
 
         # If/Else statement to validate the input provided by user
         if len(guess) == 1 and guess.isalpha():
@@ -154,16 +154,16 @@ def play_hangman(random_word):
 
         # Add guess to guessed letters
         guessed_letters += guess
-        
+
         # If wrong_letter_count is 0. Player wins and the loop breaks
         if wrong_letter_count == 0:
             print(f"{Fore.GREEN}\nCongrats. The secret word is {random_word}.")
             print("\nYou saved the man:)")
             break
-        
         # If tries is 0. It prints the player lost message
         elif tries == 0:
             print(f" You lose. The secret word was {random_word}.\n")
+
     return tries
 
 
