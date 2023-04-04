@@ -126,27 +126,25 @@ def play_hangman(random_word):
 
         # Input letter provided by user and returned in uppercase
         guess = input(f"{Fore.YELLOW}\n\n Please enter a letter: ").upper()
-
+        
         # If/Else statement to validate the input provided by user
         if len(guess) == 1 and guess.isalpha():
             # If/Else statement to check the letter was already guessed by user
-            if guess not in random_word:
-                print(f"{Fore.RED}\n You guessed wrong. Try Again")
-                # Reduce by one with each wrong guess
-                tries -= 1
-                print(Fore.WHITE + display_hangman(tries))
-                print(f"{Fore.RED}\n Attempt left: {tries}\n")
-                guessed_letters += guess
-            elif guess in guessed_letters:
+            if guess in guessed_letters:
                 print(f"{Fore.YELLOW}\n{guess} is already guessed!")
                 print(Fore.WHITE + display_hangman(tries))
                 print(f"{Fore.RED}\n Attempt left: {tries}\n")
+            elif guess not in random_word:
+                print(f"{Fore.RED}\n You guessed wrong. Try Again")
+                # Reduce by one with each wrong guess
+                tries -= 1
                 guessed_letters += guess
+                print(Fore.WHITE + display_hangman(tries))
+                print(f"{Fore.RED}\n Attempt left: {tries}\n")
             else:
                 print(f"{Fore.GREEN}\n Correct! {guess} is in the word.")
                 print(Fore.WHITE + display_hangman(tries))
                 print(f"{Fore.RED}\n Attempt left: {tries}\n")
-                guessed_letters += guess
         else:
             print(Fore.RED + "\n Invalid input. Enter only one alphabet")
             print(Fore.WHITE + display_hangman(tries))
