@@ -162,7 +162,7 @@ def play_hangman(random_word):
     guessed_letters = "AEIOU"
     tries = 6
     print(Fore.WHITE + display_hangman(tries))
-    print(f"{Fore.RED}\n Attempt left: {tries}\n")
+    print(f"{Fore.RED}\n Total Attenpts: {tries}\n")
 
     while tries > 0:
         wrong_letter_count = 0

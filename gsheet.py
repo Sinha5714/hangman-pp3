@@ -43,7 +43,7 @@ def validate_user_details(user, password):
                 "Username and Password should be more than 4 characters"
             )
     except ValueError as v:
-        print(f"\nInvalid Input: {v}")
+        print(f"{Fore.RED}\nInvalid Input: {v}")
         return False
     try:
         existing_user = login_data()
