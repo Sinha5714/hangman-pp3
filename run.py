@@ -1,12 +1,19 @@
+# Imports
+# Python
+# --------------------
 import random
 import time
+
+# 3rd Party
+# --------------------
 from colorama import Fore
-from colorama import init
+
+# Internal
+# --------------------
 from gsheet import update_login_data
 from gsheet import login_data
 from gsheet import validate_user_details
-
-init(autoreset=True)
+# ----------------------
 
 current_user = {'name': 'Remo'}
 
@@ -104,7 +111,6 @@ def user_exist():
         get_user_details()
     else:
         print("Invalid input. Type Y/N")
-            
 
 
 def choose_random_word():
