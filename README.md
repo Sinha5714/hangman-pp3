@@ -9,7 +9,7 @@
 
 [Link to the website](https://hangman-pp.herokuapp.com/)
 
-![An image previewing all devices](assets/images/screenshots/devices-preview.png)
+![An image previewing all devices](/assets/screenshots/preview.png)
 
 ## Contents
 [UX](#ux)
@@ -31,34 +31,34 @@
 
 ## UX
 ### User Stories
-- Learn to identify animals
-- Play a quiz game
-- Become a top scorer
-- Able to restart the quiz
+- Play Hangman game
+- Signup to play game
+- Login to play game
+- Able to restart the game
 - Able to use in different media 
 ### Site Owner Goals
-- Website for a quiz game for kids
-- Rules for the quiz
-- Timer element for the quiz
-- Score obtain by the user
-- Identifying animals quiz for kids
-- Able to select option and know its correct or wrong
+- Website for a Hangman game
+- Rules for the game
+- Instruction for Signup
+- Login data check
+- Validation for login and signup
+- Log signup data
+- Save signup details in googlespread worksheet
+- Extract login details and check
+- Display of hangman
+- Chances left for user
+- Random words for the game
+- Hint letters for the user
 - Add their name to the game
-- Save their score in the high score table
-- Able to see the image questions in all devices
+- Deployment of the game
 ### Potential Features
-- Main Page
-- Rules for the Quiz
-- Username Entry Page
-- High Score Page
-- Quiz Area
-- End Page after Quiz Completion
+- 
  
 
 ## Features
 ### Existing Features
 
-#### Main Page
+#### Home page display
 - The main page will be displayed once the website is open.
 - It consists of a heading, a small description of the game and three buttons.
 - Each button has seperate function:
@@ -66,30 +66,30 @@
     - How to Play button : Opens the rules page of the quiz
     - High Scores button : Opens the page for high score table
     
-  ![An image of main page](/assets/images/screenshots/game-area.png)
+  ![An image of home display](/assets/screenshots/gameload.png)
 
-#### Rules for the Quiz
+#### Rules for the Game
   - This page opens once the "How To Play" button is clicked on main-page.
   - This page consists of rules about how to play the game and a "Home" button.
   - Once the Home button is clicked, user goes back to the main-page.
 
-![An image of rules page](assets/images/screenshots/rule-page.png)
+![An image of rules page](assets/screenshots/rules.png)
 
-#### Username Entry Page
+#### User Signup Area
 - This page opens when "Play" button is clicked in the main page.
 - This page consists of a heading, an input field for user to enter the name and a "Start Game" button.
 - Once the "Start Game" button is clicked user can start playing the quiz.
 
-![An image of Username Entry Page](/assets/images/screenshots/enter-name.png)
+![An image of Username Entry Page](/assets/screenshots/username.png)
 
-#### High Score Page
+#### User Login Area
 - This page opens when "High Scores" button is clicked in main page.
 - This page consists of a heading, a table with Table heading of "USERNAME" and "SCORES" and a Home button.
 - Once the "Home" button is clicked, user will go back to main-page.
 
-![An image of High Score Area](assets/images/screenshots/high-score-page.png)
+![An image of High Score Area](assets/screenshots/login.png)
 
-#### Quiz Area
+#### Game display Area
 - This page opens when "Start Game" button is clicked in Username Entry Page.
 - This page consists of the following:
     - A heading
@@ -106,9 +106,9 @@
 - Restart button is provided for user to restart the game in the same quiz page. 
 
 
-![An image of quiz area](assets/images/screenshots/quiz-page.png)
+![An image of quiz area](assets/screenshots/gamedisplay.png)
 
-#### End Page after Quiz Completion 
+#### Restart Game 
 - This page opens automatically after the 10 quiz questions have been played.
 - This page consists of :
     - A heading
@@ -119,7 +119,7 @@
     - Home button
 - Once "Save High Score" button is clicked, username and scores will be added to the high score table and "High Score Page" will be opened.
 
-![An image of end page](assets/images/screenshots/end-page-area.png)
+![An image of end page](assets/screenshots/restart.png)
 
 ### Features to be implemented
 - More question images
