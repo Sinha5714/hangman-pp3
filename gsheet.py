@@ -1,5 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
+import colorama
+from colorama import Fore
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -41,22 +43,22 @@ def validate_user_details(user, password):
                 "Username and Password should be more than 4 characters"
             )
     except ValueError as v:
-        print(f"Invalid Input: {v}")
+        print(f"\nInvalid Input: {v}")
         return False
     try:
         existing_user = login_data()
         for ind in existing_user:
             if ind["USERNAME"] == user:
                 raise ValueError(
-                    "Username already exist"
+                    "\nUsername already exist"
                 )
     except ValueError as e:
-        print(f"Invalid Username: {e}")
+        print(f"{Fore.RED}\nInvalid Username: {e}")
         return False
     try:
         if not (isinstance(user, str) or isinstance(password, str)):
             raise TypeError(
-                "Enter details in string form only"
+                "\nEnter details in string form only"
             )
     except TypeError as m:
         print(f"Invalid user input: {m}")

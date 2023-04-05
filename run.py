@@ -1,9 +1,12 @@
 import random
 import time
 from colorama import Fore
+from colorama import init
 from gsheet import update_login_data
 from gsheet import login_data
 from gsheet import validate_user_details
+
+init(autoreset=True)
 
 current_user = {'name': 'Remo'}
 
@@ -48,9 +51,12 @@ def get_user_details():
     the input provided and after validation append the input 
     to google spread worksheet
     """
+    time.sleep(2)
     print(f"{Fore.GREEN}\nSIGN UP TO PLAY HANGMAN!!!")
+    time.sleep(2)
     print(f"{Fore.YELLOW}\nInstructions for Signup:-")
-    print(f"{Fore.YELLOW}\nUsername and Password are case sensitive")
+    time.sleep(1)
+    print("\nUsername and Password are case sensitive")
     print("Username and Password should be more than 4 characters")
     time.sleep(1)
     user_input = input(f"{Fore.CYAN}\nEnter Username:\n")
