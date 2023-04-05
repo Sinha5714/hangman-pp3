@@ -47,8 +47,8 @@ def signup_check():
 
 def get_user_details():
     """
-    To get the user detail for sign up and validate 
-    the input provided and after validation append the input 
+    To get the user detail for sign up and validate
+    the input provided and after validation append the input
     to google spread worksheet
     """
     time.sleep(2)

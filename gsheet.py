@@ -22,13 +22,13 @@ def login_data():
     """
     users_login = USERS.get_all_records()
     return users_login
-    
+
 
 def update_login_data(data):
     """
     Update users worksheet with new username and
     password data
-    """ 
+    """
     USERS.append_row(data)
 
 
