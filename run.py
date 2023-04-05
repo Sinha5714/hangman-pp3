@@ -33,7 +33,7 @@ def signup_check():
     To ask user if they already are signed up if not it promts them
     to signup and if already signed up ask them to login
     """
-    exist_check = input(f"{Fore.CYAN}Are you an existing user? Y/N")
+    exist_check = input(f"{Fore.CYAN}Are you an existing user? Y/N\n")
     if exist_check.upper() == "Y":
         return True
     elif exist_check.upper() == "N":
@@ -48,7 +48,10 @@ def get_user_details():
     the input provided and after validation append the input 
     to google spread worksheet
     """
-    print(f"{Fore.GREEN}\nSign up to play Hangman Game")
+    print(f"{Fore.GREEN}\nSIGN UP TO PLAY HANGMAN!!!")
+    print(f"{Fore.YELLOW}\nInstructions for Signup:-")
+    print(f"{Fore.YELLOW}\nUsername and Password are case sensitive")
+    print("Username and Password should be more than 4 characters")
     time.sleep(1)
     user_input = input(f"{Fore.CYAN}\nEnter Username:\n")
     time.sleep(1)
