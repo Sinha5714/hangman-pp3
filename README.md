@@ -54,6 +54,10 @@
 ### Potential Features
 - 
  
+## FlowChart
+- [Lucidchart]((https://www.lucidchart.com)) was used to build flowchart
+
+![flowchart](/assets/screenshots/lucid.jpeg)
 
 ## Features
 ### Existing Features
@@ -122,10 +126,11 @@
 ![An image of end page](assets/screenshots/restart.png)
 
 ### Features to be implemented
-- More question images
-- Sound for the game
-- Event listners for all buttons to call functions
-- An online multiplayer quiz competition
+- More random words
+- Better display
+- Different levels as per the size of words
+- Adding score and logging it
+
 ## Technology Used
 ### Language Used
   - Python
@@ -133,9 +138,15 @@
 ### Other websites/tools used
 - [Lucidchart]((https://www.lucidchart.com)) was used to build flowchart
 - [GitHub](https://github.com/) was used for saving and storing files.
-- [GitPod](https://www.gitpod.io/) was the IDE used for writing and editing code.
-- [Heroku](https://www.heroku.com/) was used as the hosting platform for this site.
-## Testing
+- [GitPod](https://www.gitpod.io/) was the IDE used for writing code.
+- [Heroku](https://www.heroku.com/) was used as the deploying platform for this site.
+
+### 3rd Party Python Libraries used
+- [Google sheets API](https://github.com/burnash/gspread) was used to store and check the user input and authorize the user identity
+- [Google OAuth](https://google-auth.readthedocs.io/en/stable/reference/google.oauth2.credentials.html) was used to connect the project with the google account.
+- [Colorama](https://pypi.org/project/colorama/) was used for better visual display
+
+## Testing on Browsers
 - I tested that this page works in different browsers - Chrome and Safari
 
 ### Manual Testing
@@ -233,7 +244,6 @@
 ### Content
 - The text content was provided by the site owner.
 - Idea of Hangman game has been taken from hangman game played around the world
-
 
 ### Code
 #### The following ideas were borrowed from [Love Sandwiches](https://github.com/Sinha5714/Love_Sandwiches)
