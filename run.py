@@ -28,6 +28,20 @@ words = ['flower', 'nurse', 'house', 'packet', 'rather', 'zebra',
          'legacy', 'notice', 'radius', 'online']
 
 
+def signup_check():
+    """
+    To ask user if they already are signed up if not it promts them
+    to signup and if already signed up ask them to login
+    """
+    exist_check = input(f"{Fore.CYAN}Are you an existing user? Y/N")
+    if exist_check.upper() == "Y":
+        return True
+    elif exist_check.upper() == "N":
+        return False
+    else:
+        return signup_check()
+
+
 def get_user_details():
     """
     To get the user detail for sign up and validate 
@@ -51,7 +65,7 @@ def get_user_details():
 def user_exist():
     """
     To check if user already exist and validate it by comparing
-    the input matches in stored values in goggle spread worksheet
+    the input matches in stored values in google spread worksheet
     """
     check = input("Are you already signed in: Y/N \n")
     if check.upper() == "Y":
@@ -68,8 +82,6 @@ def user_exist():
                     time.sleep(.5)
                     current_user['name'] = data['USERNAME']
                     print(f"\nWelcome back {current_user['name']}")
-                    open_rules()
-                    play_hangman(choose_random_word())
                 else:
                     print("Incorrect password...")
                     user_exist()
@@ -98,7 +110,6 @@ def open_rules():
     If player do not want to see the rules its automatically
     starts the game
     """
-    # Loop to ask the same question if there is an error
     while True:
         show_rules = input(Fore.CYAN + "\nWant to open Rules: Y/N \n")
         if show_rules.isalpha() and show_rules.upper() == "Y":
@@ -268,7 +279,14 @@ def main_game():
     """
     Function to call all functions
     """
-    user_exist()
+    if signup_check():
+        user_exist()
+    else:
+        get_user_details()
+        user_exist()
+    open_rules()
+    play_hangman(choose_random_word())
     restart_game()
+
 
 main_game()
