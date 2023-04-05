@@ -7,7 +7,7 @@
    - Player get 6 chances to save the man
    - Guess the correct words before chances are over and save the man.
 
-[Link to the website](https://sinha5714.github.io/animal-kingdom/)
+[Link to the website](https://hangman-pp.herokuapp.com/)
 
 ![An image previewing all devices](assets/images/screenshots/devices-preview.png)
 
@@ -130,17 +130,6 @@
 ## Testing
 - I tested that this page works in different browsers - Chrome and Safari
 
-### Lighthouse
-- The deployed website was also tested with Google Chrome's Lighhouse feature and all scores have been above 90 for both mobile and desktop.
-
-#### For Desktop 
-
-![Lighthouse result for desktop](assets/images/screenshots/lighthouse-desktop.png)
-
-#### For Mobile 
-
-![Lighthouse result for mobile](assets/images/screenshots/lighthouse-mobile.png)
-
 ### Tested Devices with Browsers
 - iPhone 12
     - Safari
@@ -149,7 +138,6 @@
 - Macbook Pro 2019 16-inch
     - Chrome
     - Safari
-- Also tested various device sizes using [Dev.tools](https://developer.chrome.com/docs/devtools/)
 
 ### Validator Testing
 
