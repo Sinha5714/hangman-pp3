@@ -162,18 +162,12 @@ def play_hangman(random_word):
     guessed_letters = "AEIOU"
     tries = 6
     print(Fore.WHITE + display_hangman(tries))
-    print(f"{Fore.RED}\nAttempt left: {tries}\n")
+    print(f"{Fore.RED}\n Attempt left: {tries}\n")
 
     while tries > 0:
         wrong_letter_count = 0
-        for letter in random_word:
-            if letter in guessed_letters:
-                print(f"{Fore.GREEN}{letter}", end=' ')
-            else:
-                print(Fore.RED + " _ ", end=' ')
-                wrong_letter_count += 1
-
         guess = input(f"{Fore.YELLOW}\n\n Please enter your guess: ").upper()
+
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(f"{Fore.YELLOW}\n{guess} is already guessed!")
@@ -194,6 +188,13 @@ def play_hangman(random_word):
             print(Fore.WHITE + display_hangman(tries))
             print(f"{Fore.RED}\n Attempt left: {tries}\n")
         guessed_letters += guess
+
+        for letter in random_word:
+            if letter in guessed_letters:
+                print(f"{Fore.GREEN}{letter}", end=' ')
+            else:
+                print(Fore.RED + " _ ", end=' ')
+                wrong_letter_count += 1
 
         if wrong_letter_count == 0:
             print(f"{Fore.GREEN}\nCongrats. The secret word is {random_word}.")
@@ -280,7 +281,7 @@ def restart_game():
             print(f"{Fore.LIGHTCYAN_EX}\nGood Bye!!")
             break
         else:
-            print("Invalid input. Type Y/N")
+            print(f"{Fore.RED}Invalid input. Type Y/N")
 
 
 def main_game():
