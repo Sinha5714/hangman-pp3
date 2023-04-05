@@ -76,7 +76,7 @@ def user_exist():
     To check if user already exist and validate it by comparing
     the input matches in stored values in google spread worksheet
     """
-    check = input("Are you already signed in: Y/N \n")
+    check = input(f"{Fore.GREEN}\nEnter Login Details: Y/N \n")
     if check.upper() == "Y":
         time.sleep(1)
         username = input(Fore.CYAN + "\nEnter your name: \n")
@@ -274,7 +274,6 @@ def restart_game():
             print(f"{Fore.CYAN}\nTRY YOUR LUCK AGAIN!!")
             print(f"{Fore.GREEN}\nRestarting Game......")
             time.sleep(2.5)
-            enter_name()
             play_hangman(choose_random_word())
         elif answer.upper() == "N":
             time.sleep(1.5)
