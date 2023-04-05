@@ -56,11 +56,11 @@ def validate_user_details(user, password):
     try:
         if not (isinstance(user, str) or isinstance(password, str)):
             raise TypeError(
-                "Enter details in alphabets only"
+                "Enter details in string form only"
             )
     except TypeError as m:
         print(f"Invalid user input: {m}")
         return False
     else:
-        print("Login confirmed....")
+        print("\nLogin confirmed....")
         return True

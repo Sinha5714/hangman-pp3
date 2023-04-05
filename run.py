@@ -30,11 +30,16 @@ words = ['flower', 'nurse', 'house', 'packet', 'rather', 'zebra',
 
 def get_user_details():
     """
-    To get username and password for the game
+    To get the user detail for sign up and validate 
+    the input provided and after validation append the input 
+    to google spread worksheet
     """
-    print("\nSign up to play Hangman Game")
-    user_input = input("\nEnter Username:\n")
-    user_password = input("\nEnter Password: \n")
+    print(f"{Fore.GREEN}\nSign up to play Hangman Game")
+    time.sleep(1)
+    user_input = input(f"{Fore.CYAN}\nEnter Username:\n")
+    time.sleep(1)
+    user_password = input(f"{Fore.CYAN}\nEnter Password: \n")
+    time.sleep(2)
     validate = validate_user_details(user_input, user_password)
     if validate:
         login = [user_input, user_password]
@@ -45,11 +50,14 @@ def get_user_details():
 
 def user_exist():
     """
-    To check if user is already signed up
+    To check if user already exist and validate it by comparing
+    the input matches in stored values in goggle spread worksheet
     """
     check = input("Are you already signed in: Y/N \n")
     if check.upper() == "Y":
+        time.sleep(1)
         username = input(Fore.CYAN + "\nEnter your name: \n")
+        time.sleep(1)
         password = input(Fore.CYAN + "\nEnter your password: \n")
         logins = login_data()
         check_login = 0
@@ -57,6 +65,7 @@ def user_exist():
             if username == data['USERNAME']:
                 if password == data['PASSWORD']:
                     print("\nLogin Sucessfully...")
+                    time.sleep(.5)
                     current_user['name'] = data['USERNAME']
                     print(f"\nWelcome back {current_user['name']}")
                     open_rules()
@@ -86,6 +95,8 @@ def choose_random_word():
 def open_rules():
     """
     Contains a while loop to ask question to open rules
+    If player do not want to see the rules its automatically
+    starts the game
     """
     # Loop to ask the same question if there is an error
     while True:
@@ -105,7 +116,7 @@ def open_rules():
 
 def how_to_play():
     """
-    Function to display rules of the game
+    Function to display rules of the game to the user
     """
     print(f"{Fore.CYAN}\nHOW TO PLAY:-")
     time.sleep(0.5)
@@ -142,7 +153,6 @@ def play_hangman(random_word):
                 print(Fore.RED + " _ ", end=' ')
                 wrong_letter_count += 1
 
-        # Input letter provided by user and returned in uppercase
         guess = input(f"{Fore.YELLOW}\n\n Please enter your guess: ").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
@@ -169,8 +179,9 @@ def play_hangman(random_word):
             print(f"{Fore.GREEN}\nCongrats. The secret word is {random_word}.")
             print("\nYou saved the man:)")
             break
-        elif tries == 0:
+        if tries == 0:
             print(f" You lose. The secret word was {random_word}.\n")
+
     return tries
 
 
