@@ -126,7 +126,15 @@
 - Sound for the game
 - Event listners for all buttons to call functions
 - An online multiplayer quiz competition
+## Technology Used
+### Language Used
+  - Python
 
+### Other websites/tools used
+- [Lucidchart]((https://www.lucidchart.com)) was used to build flowchart
+- [GitHub](https://github.com/) was used for saving and storing files.
+- [GitPod](https://www.gitpod.io/) was the IDE used for writing and editing code.
+- [Heroku](https://www.heroku.com/) was used as the hosting platform for this site.
 ## Testing
 - I tested that this page works in different browsers - Chrome and Safari
 
