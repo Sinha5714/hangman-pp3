@@ -42,6 +42,7 @@ def signup_check():
     elif exist_check.upper() == "N":
         return False
     else:
+        print(f"{Fore.RED}Invalid Input")
         return signup_check()
 
 
@@ -76,10 +77,10 @@ def user_exist():
     To check if user already exist and validate it by comparing
     the input matches in stored values in google spread worksheet
     """
-    check = input(f"{Fore.GREEN}\nEnter Login Details: Y/N \n")
+    check = input(f"{Fore.GREEN}\nExisting User: LOGIN: Y/N \n")
     if check.upper() == "Y":
         time.sleep(1)
-        username = input(Fore.CYAN + "\nEnter your name: \n")
+        username = input(Fore.CYAN + "\nEnter your username: \n")
         time.sleep(1)
         password = input(Fore.CYAN + "\nEnter your password: \n")
         logins = login_data()
@@ -87,7 +88,7 @@ def user_exist():
         for data in logins:
             if username == data['USERNAME']:
                 if password == data['PASSWORD']:
-                    print("\nLogin Sucessfully...")
+                    print("\nLogged in Sucessfully...")
                     time.sleep(.5)
                     current_user['name'] = data['USERNAME']
                     print(f"\nWelcome back {current_user['name']}")
@@ -103,6 +104,7 @@ def user_exist():
         get_user_details()
     else:
         print("Invalid input. Type Y/N")
+            
 
 
 def choose_random_word():
@@ -162,7 +164,7 @@ def play_hangman(random_word):
     guessed_letters = "AEIOU"
     tries = 6
     print(Fore.WHITE + display_hangman(tries))
-    print(f"{Fore.RED}\n Total Attenpts: {tries}\n")
+    print(f"{Fore.RED}\n Total Attempts: {tries}\n")
 
     while tries > 0:
         wrong_letter_count = 0
