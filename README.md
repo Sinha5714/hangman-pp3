@@ -151,7 +151,17 @@
     - Safari
 
 ### Validator Testing
+#### PEP8 Python Validator
+- [PEP8 Python Validator](https://pep8ci.herokuapp.com/) was used to validate the code
+- No errors were found
 
+- Result: gsheet.py
+
+![gsheet.py result](/assets/screenshots/gsheet.png)
+
+- Result: run.py
+
+![run.py result](/assets/screenshots/run-valid.png)
 
 ### Unfixed Bugs
 - No unfixed bugs.
@@ -226,7 +236,7 @@
 
 
 ### Code
-#### The following ideas were borrowed from [Love Sanswiches](https://github.com/Sinha5714/Love_Sandwiches)
+#### The following ideas were borrowed from [Love Sandwiches](https://github.com/Sinha5714/Love_Sandwiches)
 
 -  validate_user_details function
 -  How to import gspread
@@ -236,10 +246,6 @@
 
 - play_hangman function; (https://www.youtube.com/shorts/GYCCN0IP8u0)
 
-
-#### Following code idea was provided by my Mentor
-
-- saveHighScore(); (https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value)
 
 ### Thank You
 - to my mentor Mo Shami for supporting me with his feedback through the entire project
