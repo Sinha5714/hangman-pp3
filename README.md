@@ -32,8 +32,8 @@
 ## UX
 ### User Stories
 - Play Hangman game
-- Signup to play game
-- Login to play game
+- Signup to play game as a first time user
+- Login to play game as existing user
 - Able to restart the game
 - Able to use in different media 
 ### Site Owner Goals
@@ -130,6 +130,9 @@
 ## Testing
 - I tested that this page works in different browsers - Chrome and Safari
 
+### Manual Testing
+- 
+
 ### Tested Devices with Browsers
 - iPhone 12
     - Safari
@@ -141,42 +144,65 @@
 
 ### Validator Testing
 
-#### HTML
-- No errors were returned when passing through the official [W3C validator](https://validator.w3.org/)
-
-![W3C HTML Validator](assets/images/screenshots/w3c-html.png)
-
-#### CSS
-- No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
-
-![W3C CSS Jigsaw](assets/images/screenshots/w3c-css.png)
-
-#### JS 
-- No errors were found when passing through the official [JShint Validator](https://jshint.com/)
-- There are 22 functions in this file.
-- Function with the largest signature take 2 arguments, while the median is 0.
-- Largest function has 17 statements in it, while the median is 3.
-- The most complex function has a cyclomatic complexity value of 2 while the median is 1.
-- Warnings were provided regarding unused functions.
-- These functions are called in index.html in buttons using "onclick" attribute.
-- Will implement event listeners in future. Wanted to try "onclick" attribute as learned in the course.
-
-![JS hint image](assets/images/screenshots/js-hint.png)
 
 ### Unfixed Bugs
 - No unfixed bugs.
 
 ## Deployment
 
-### Deploying the website to GitHub Pages:
-The site was deployed to GitHub pages. The steps to deploy are as follows:
-- In the GitHub repository, navigate to the Settings tab
-- From the source section drop-down menu, select the Master Branch
-- Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+### Deploying the website in Heroko:
+- The website was deployed to heroko using following steps:
+  - Login or create an account at Heroku
 
-The live link can be found here - https://sinha5714.github.io/animal-kingdom/
+![Login page](/assets/heroku/heroku_login.png)
 
-### Cloning the repository
+- Creating an app
+  - Create new app in the top right of the screen and add an app name.
+  - Select region
+  - Then click "create app".
+
+![create app](/assets/heroku/createapp.png)
+
+- Open settings Tab
+  - Click on config var
+     - Store CREDS file from gitpod in key and add the values
+     - Store PORT in key and value
+
+![Config var](/assets/heroku/config.png)
+
+  - Add Buildpacks
+     - Add python buildpack first
+     - Add Nodejs buildpack after that
+
+![buildpacks](/assets/heroku/buildpacks.png)
+
+ - Open Deploy Tab
+   - Choose deployment method
+     - Connect GITHUB
+     - Login if prompted
+
+![connect github](/assets/heroku/method.png)
+
+   - Connect to Github
+     - Choose repositories you want to connect
+     - Click "Connect"
+
+![connect](/assets/heroku/repo-connect.png)
+
+  - Automatic and Manual deploy
+     - Choose a method to deploy
+     - After Deploy is clicked it will install various file
+
+![deploy](/assets/heroku/deploy.png)
+
+  - Final Deployment
+     - A view button will display
+     - Once clicked the website will open
+
+![view](/assets/heroku/view.png)
+
+
+### Cloning the repository in GitHub
 1. Visit the GitHub page of the website’s repository
 2. Click the “Clone” button on top of the page
 3. Click on “HTTPS”
@@ -188,38 +214,25 @@ The live link can be found here - https://sinha5714.github.io/animal-kingdom/
 
 ### Content
 - The text content was provided by the site owner.
-- The icon for the title has been taken from [favicon.io](https://favicon.io/)
-- The fonts of the content was taken from [google fonts](https://fonts.google.com/)
-- The icon has been taken from [fontawesome.com](https://fontawesome.com/v6/docs/) 
+- Idea of Hangman game has been taken from hangman game played around the world
 
-### Media
-- The images in the website including gallery and background are taken from [pexels.com](https://www.pexels.com/)
 
 ### Code
-#### The following code ideas were borrowed from [Love Maths](https://github.com/Sinha5714/love_Maths)
+#### The following ideas were borrowed from [Love Sanswiches](https://github.com/Sinha5714/Love_Sandwiches)
 
--  Increment Score function
+-  validate_user_details function
+-  How to import gspread
+-  How to import Credentials from google.oauth
 
-#### The following idea was a help from my Sister
+#### The following code idea was taken from google search and various youtube videos
 
--  Splicing used question so that it does not repeat
+- play_hangman function; (https://www.youtube.com/shorts/GYCCN0IP8u0)
 
-#### The following code idea was taken from google search
-
-- setAttribute("disabled", "disabled");
-
-#### Following code was provided by student in slack community
-
-- saveHighScore();
-- countdown();
 
 #### Following code idea was provided by my Mentor
 
 - saveHighScore(); (https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value)
 
 ### Thank You
-- to my mentor @Cans_mentor for supporting me with his feedback through the entire project
-- to my Sister(Manisha Sinha) who helped with the code
-- to Shivani_5P from slack for consenting to borrow ideas from her project
-- to Tutor support of Code Institute
+- to my mentor Mo Shami for supporting me with his feedback through the entire project
 - to Code Institute and Slack community for helping me when I was getting stuck with some challenges.
