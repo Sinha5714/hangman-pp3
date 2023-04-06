@@ -59,7 +59,7 @@
 - Deployment of the game
  
 ## FlowChart
-- [Lucidchart]((https://www.lucidchart.com)) was used to build flowchart
+- [Lucidchart](https://www.lucidchart.com) was used to build flowchart
 
 ![flowchart](/assets/screenshots/lucid.jpeg)
 
@@ -124,7 +124,7 @@
   - Python
 
 ### Other websites/tools used
-- [Lucidchart]((https://www.lucidchart.com)) was used to build flowchart
+- [Lucidchart](https://www.lucidchart.com) was used to build flowchart
 - [GitHub](https://github.com/) was used for saving and storing files.
 - [GitPod](https://www.gitpod.io/) was the IDE used for writing code.
 - [Heroku](https://www.heroku.com/) was used as the deploying platform for this site.
