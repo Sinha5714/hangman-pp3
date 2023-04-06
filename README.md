@@ -311,6 +311,7 @@
 #### The following code idea was taken from google search and various youtube videos
 
 - play_hangman function; (https://www.youtube.com/shorts/GYCCN0IP8u0)
+- How to clear terminal from google
 
 
 ### Thank You
