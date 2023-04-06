@@ -328,10 +328,9 @@
     <img src = "assets/screenshots/gsheet.png" alt = "A screenshot of gsheet.py result">
 </details>
 
-![gsheet.py result](/assets/screenshots/gsheet.png)
 
 <details>
-    <summary>Flowchart</summary>
+    <summary>run.py</summary>
     <p>Result: run.py</p>
     <img src = "assets/screenshots/run-valid.png" alt = "A screenshot of run.py result">
 </details>
@@ -351,51 +350,71 @@
     <img src="assets/heroku/heroku_login.png" alt="Heroko login page">
 </details>
 
-
 #### Creating an app
   - Create new app in the top right of the screen and add an app name.
   - Select region
   - Then click "create app".
 
-![create app](/assets/heroku/createapp.png)
+<details>
+    <summary>Create App</summary>
+    <img src="assets/heroku/createapp.png" alt="Heroko create app screenshot">
+</details>
 
 #### Open settings Tab
   ##### Click on config var
   - Store CREDS file from gitpod in key and add the values
   - Store PORT in key and value
 
-![Config var](/assets/heroku/config.png)
+<details>
+    <summary>Config var</summary>
+    <img src="assets/heroku/config.png" alt="Config var screenshot">
+</details>
 
   ##### Add Buildpacks
   - Add python buildpack first
   - Add Nodejs buildpack after that
 
-![buildpacks](/assets/heroku/buildpacks.png)
+<details>
+    <summary>Buildpacks</summary>
+    <img src="assets/heroku/buildpacks.png" alt="Buildpacks screenshot">
+</details>
 
  #### Open Deploy Tab
    ##### Choose deployment method
   - Connect GITHUB
   - Login if prompted
 
-![connect github](/assets/heroku/method.png)
+<details>
+    <summary>Deployment method</summary>
+    <img src="assets/heroku/method.png" alt="Deployment method screenshot">
+</details>
 
    ##### Connect to Github
   - Choose repositories you want to connect
   - Click "Connect"
 
-![connect](/assets/heroku/repo-connect.png)
+<details>
+    <summary> Repo Connect</summary>
+    <img src="assets/heroku/repo-connect.png" alt="Repo connect screenshot">
+</details>
 
   ##### Automatic and Manual deploy
   - Choose a method to deploy
   - After Deploy is clicked it will install various file
 
-![deploy](/assets/heroku/deploy.png)
+<details>
+    <summary> Deploy methods</summary>
+    <img src="assets/heroku/deploy.png" alt="deploy method screenshot">
+</details>
 
   ##### Final Deployment
   - A view button will display
   - Once clicked the website will open
 
-![view](/assets/heroku/view.png)
+<details>
+    <summary> Deploy</summary>
+    <img src="assets/heroku/view.png" alt="view screenshot">
+</details>
 
 
 ### Cloning the repository in GitHub
