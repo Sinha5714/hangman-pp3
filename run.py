@@ -44,7 +44,7 @@ def clear_screen():
     Clears the terminal of content.
     It is called when the user needs a new "screen" or viewport.
     """
-    os.system("cls" if os.name == 'nt' else "clear")
+    os.system("cls")
 
 
 def signup_check():
@@ -76,9 +76,9 @@ def get_user_details():
     print("\nUsername and Password are case sensitive")
     print("Username and Password should be more than 4 characters")
     time.sleep(1)
-    user_input = input(f"{Fore.CYAN}\nEnter Username:\n")
+    user_input = input(f"{Fore.CYAN}\nEnter New Username:\n")
     time.sleep(1)
-    user_password = input(f"{Fore.CYAN}\nEnter Password: \n")
+    user_password = input(f"{Fore.CYAN}\nEnter New Password: \n")
     time.sleep(2)
     validate = validate_user_details(user_input, user_password)
     if validate:
@@ -87,6 +87,7 @@ def get_user_details():
         user_exist()
     else:
         time.sleep(2)
+        clear_screen()
         get_user_details()
 
 
