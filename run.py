@@ -143,7 +143,7 @@ def open_rules():
 
 def how_to_play():
     """
-    Function to display rules of the game to the user
+    To display rules of the game to the user
     """
     print(f"{Fore.CYAN}\nHOW TO PLAY:-")
     time.sleep(0.5)
@@ -165,6 +165,8 @@ def how_to_play():
 def play_hangman(random_word):
     """
     Function for the game which inherit randomWord from randomWord function
+    and run a loop until no tries left. Also player win if the tries are left
+    and wrong_letter provided is zero
     """
     guessed_letters = "AEIOU"
     tries = 6
