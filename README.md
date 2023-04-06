@@ -61,11 +61,13 @@
 
 ## User Experience
 ### Target Audience
+
 - There is no specific audience for the game. 
 - But it displays a dead man cartoon image so adults can decide if it's ok for their children to play or not
 - I would recommend that its also a game to improve vocabulary so children above 8 years can play
 
 ### User Requirements and Expectations
+
 - A simple and fun game
 - Straightforward Navigation
 - Game personalisation by entering players' names
@@ -74,84 +76,65 @@
 ### User Manual
 <details><summary>Click here to view instructions</summary>
 
-#### Main Menu
-On 
+#### Load Game
 
-At any point of the game, if the user inputs a number which do not correspond to the available option then they will be prompt to try again.
+- On loading the game, users are presented with heading of the game which  displays design of hangman and the title.
+- Under the heading, a question is prompted if the user is existing user or not.
+- Operation: Are you an existing user: Y/N
+- If user inputs do not correspond with available option then they will be promt to try again
 
-#### Game rules
-With the first option to view game rules, the users are presented with a short game rules and once read they can go back to the main menu.
-Operation: Click any key and enter.
+#### Sign Up
 
-#### Play
-With the Play Game option, users are asked if they have played the game before or not.
-Operation: Input a numeric value and press enter key. 
-The extra available option is to press 'y' key for 'yes' and 'n' for 'No'.
-1. Yes
-2. No
+- If user is a new player, they will be required to sign up
+- The instructions will be displayed how to sign up
+- User will be required to enter a new name and password
+- Once sign up is successful, user will be ask to login to play the game
+- Operation: Sign Up Here
+    - Enter New Username
+    - Enter New Password
 
-#### Log-in
-When selecting option 1, users are asked to input their email addresses they used in the previous game, starting with the Player 1.
+#### Login
 
-The email goes through a validation process. If the user inputs an email that has not been registered they have an option to either try another email or create a new user.
-Operation: Input a numeric value and press enter key.
-1. Try another email
-2. Create a new player
-
-User can try to input their email address until it matches the one already registered. If it does, then the greeting message with their name will be displayed.
-If they forgot their email address they can create a new players by selecting the second option.
-
-Same option follow for Player2.
-
-#### New players registration (sign-up)
-This option is available from the play option menu and during the existing users log-in.
-Here you can sign up to create a new user.
-
-Firstly, the Player1 is asked for their name follow by the email address. Both values go through the validation.
-
-Username has to be between 2-12 characters long and contain only A-Z. It can already exist in the database.
-Email: has to be a valid email containing exactly one @-sign from an existing domain. It must not exist in the database.
-
-Same option follow for Player2.
-
-If the registration is selected as part of the log-in option (Create a new player), then the relevant player will need to input their name and email address and once validated, type the email again for log in.
+- If user is an existing user, they will be asked to enter username and password
+- If it matches will the data, the user will be logged in.
+- A welcome message on the screen will be displayed for the users with their name
+- The input goes through a validation process. If the user input is not correct they have an option to try again .
+- If user does not exist, they will be prompted again with:
+    Are you an existing user: Y/N
+- Operation: Login to play Hangman
+    - Username
+    - Password
 
 #### Users greeting
 
-Once both users have been logged in, the program will display a greeting message with both names and start the game.
+- Once users have been logged in, the program will display a greeting message with the user name
+
+#### Rules
+
+- Once users have been logged in, they will be asked if they want to see the rules
+- Operation: Do you want to see the rules: Y/N
+
+#### Start Game
+
+- If user decide to see the rules, after displaying rules the game will start automatically
+- If user decide not to see the rules, the game will start automatically without displaying rules
 
 #### Game
 
-Players take turns to make their moves.
-The player to start is randomly selected by the program.
-The current player's name is displayed beneath the blue board showing which piece they play with. Player has to select which column they want to locate their piece in.
-Operation: Input a numeric value between 1 - 7 and press enter key.
+- Once the game has started it will display initial stage of hangman, attempts left and blank lines which depicts secret word
+- Operation: Enter a guess letter:
+    - User need to enter a letter to start the game
+    - Once a letter is entered the hints letters will be displayed
+    - If input is more than a letter or not an alphabet, it will display an error
+    - Once secret word is guessed, player will win
+    - If attempts are over before word is guessed, player lose
 
-A selection of invalid column will display a warning message and ask user to select a valid column.
-
-The game continues until one of the players connect their four pieces.
-
-When a player wins, a message with their name is shown on the screen.
-
-Players have 4 different options to choose from:
-1. Play again
-2. Go to main menu
-3. See your statistics
-4. Quit game
-
-Operation: Input a numeric value and press enter key.
-
-#### Play again
-By selecting this option a new game starts for the same players.
-
-#### Go to main menu
-Brings players to the main menu of the program.
-
-#### See your statistics
-Display number of games won so far by each logged player.
-
-#### Quit game
-With the guit game option, the user exits the program with a goodbye message.
+#### Restart Game
+- Once user wins or lose, a restart game question will be prompted
+- Operation: Do you want to play again: Y/N
+    - If user input is "Y", the game will restart
+    - If user input is "N", the game will quit and user will be logged out
+    - If user input is invalid, an error will be thrown and question will be prompted again
 
 </details>
 
