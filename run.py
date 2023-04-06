@@ -54,7 +54,7 @@ def signup_check():
     elif exist_check.upper() == "N":
         get_user_details()
     else:
-        print(f"{Fore.RED}Invalid Input")
+        print(f"{Fore.RED}Invalid Input. Type Y/N")
         time.sleep(1)
         signup_check()
 
@@ -118,7 +118,7 @@ def user_exist():
             check_login += 1
     if check_login == len(logins):
         print("User do not exist.Try again")
-        user_exist()
+        signup_check()
 
 
 def choose_random_word():
