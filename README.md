@@ -37,12 +37,14 @@
 
 ## UX
 ### User Stories
+
 - Play Hangman game
 - Signup to play game as a first time user
 - Login to play game as existing user
 - Able to restart the game
 - Able to use in different media 
 ### Site Owner Goals
+
 - Website for a Hangman game
 - Rules for the game
 - Instruction for Signup
@@ -59,6 +61,7 @@
 - Deployment of the game
  
 ## FlowChart
+
 - [Lucidchart](https://www.lucidchart.com) was used to build flowchart
 
 ![flowchart](/assets/screenshots/lucid.jpeg)
@@ -67,6 +70,7 @@
 ### Existing Features
 
 #### Home page display
+
 - Once the user run the program this area is displayed
 - The area consist of a display showing the heading as provided in image
 - It also prompts the users to provide if they are an existing user
@@ -74,6 +78,7 @@
   ![An image of home display](/assets/screenshots/gameload.png)
 
 #### User Signup Area
+
 - This area display an instruction for signup for new users
 - This area is displayed when player is not an existing user
 - Once new username and password is entered, it prompts Signup confirmed..
@@ -81,12 +86,14 @@
 ![An image of Username Entry Page](/assets/screenshots/signup.png)
 
 #### User Login Area
+
 - This area is displayed if user is an existing user
 - Users need to login their details to play the game
 
 ![An image of High Score Area](assets/screenshots/login.png)
 
 #### Rules for the Game
+
 - This area shows the rule of the game
 - User can decide to see the rules or directly start the game
 - After rules is displayed game starts automatically
@@ -94,6 +101,7 @@
 ![An image of rules page](assets/screenshots/rules.png)
 
 #### Game display Area
+
 - This area is displayed once the user read the rules or decide to skip the rules
 - Initial Display
   - Hangman initial stage
@@ -104,7 +112,8 @@
 
 ![An image of quiz area](assets/screenshots/gamedisplay.png)
 
-#### Restart Game 
+#### Restart Game
+
 - Once the play has played the game, they recieve a promt if they want to play again or not
 - This is provided for both kind of players: Losers or Winners
 - If they decide to play again, the game will restart
@@ -113,6 +122,7 @@
 ![An image of end page](assets/screenshots/restart.png)
 
 ### Features to be implemented
+
 - More random words
 - Better display
 - Different levels as per the size of words
@@ -121,15 +131,18 @@
 
 ## Technology Used
 ### Language Used
+
   - Python
 
 ### Other websites/tools used
+
 - [Lucidchart](https://www.lucidchart.com) was used to build flowchart
 - [GitHub](https://github.com/) was used for saving and storing files.
 - [GitPod](https://www.gitpod.io/) was the IDE used for writing code.
 - [Heroku](https://www.heroku.com/) was used as the deploying platform for this site.
 
 ### 3rd Party Python Libraries used
+
 - [Google sheets API](https://github.com/burnash/gspread) was used to store and check the user input and authorize the user identity
 - [Google OAuth](https://google-auth.readthedocs.io/en/stable/reference/google.oauth2.credentials.html) was used to connect the project with the google account.
 - [Colorama](https://pypi.org/project/colorama/) was used for better visual display
@@ -145,6 +158,7 @@
 ![worsheet](/assets/screenshots/worksheet.png)
 
 #### Sign Up
+
 - I signed up personally and asked my husband to do also
 - When the username and password were less than 4 characters it was throwing error
 - If username existed before it was throwing error
@@ -152,6 +166,7 @@
 - No error found
 
 #### Login
+
 - After signing up I and my husband logged in again
 - Once the username and password entered was correct, login was successful
 - If it was wrong, an error was thrown and asked to login again
@@ -159,6 +174,7 @@
 - No errors found
 
 #### Start Game
+
 - Once login was successful, game started prompting user to see rules or not
 - If user enter invalid input, an error was thrown and question was prompted again
 - If user decides to see rules, rules were displayed and game starts automatically.
@@ -166,10 +182,12 @@
 - No errors found
 
 #### Restart Game
+
 - Once user is done with playing, they are prompted if they want to restart or not.
 - If user enters invalid input, error is thrown and question is ask again
 - If user wants to continue, the game will restart
 - If not game will end and user will be logged out
+- No errors found
 
 
 ### Tested Devices with Browsers
