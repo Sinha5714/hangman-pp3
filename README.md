@@ -314,4 +314,5 @@
 
 ### Thank You
 - to my mentor Mo Shami for supporting me with his feedback through the entire project
+- special thanks to my husband Remo Liebetrau to help me finding out the issues in the game
 - to Code Institute and Slack community for helping me when I was getting stuck with some challenges.
