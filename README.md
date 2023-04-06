@@ -138,7 +138,39 @@
 - I tested that this game works in different browsers - Chrome and Safari and was able to deploy successfully
 
 ### Manual Testing
-- 
+#### Updating of Google spreadsheet
+- I tested manually by signing up and checking whether worsheet id being updated.
+- It was getting updated everytime signed up succesfully
+
+![worsheet](/assets/screenshots/worksheet.png)
+
+#### Sign Up
+- I signed up personally and asked my husband to do also
+- When the username and password were less than 4 characters it was throwing error
+- If username existed before it was throwing error
+- Once sign up was confirmed the worsheet was updating
+- No error found
+
+#### Login
+- After signing up I and my husband logged in again
+- Once the username and password entered was correct, login was successful
+- If it was wrong, an error was thrown and asked to login again
+- It was able to extract data from worksheet to validate username and password
+- No errors found
+
+#### Start Game
+- Once login was successful, game started prompting user to see rules or not
+- If user enter invalid input, an error was thrown and question was prompted again
+- If user decides to see rules, rules were displayed and game starts automatically.
+- If user do not want to see rules, game starts automatically
+- No errors found
+
+#### Restart Game
+- Once user is done with playing, they are prompted if they want to restart or not.
+- If user enters invalid input, error is thrown and question is ask again
+- If user wants to continue, the game will restart
+- If not game will end and user will be logged out
+
 
 ### Tested Devices with Browsers
 - iPhone 12
