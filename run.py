@@ -17,6 +17,12 @@ from gsheet import validate_user_details
 # ----------------------
 
 current_user = {'name': 'Remo'}
+# A list of words from which the random words will be chose for the game
+words = ['flower', 'nurse', 'house', 'packet', 'rather', 'zebra',
+         'human', 'table', 'laptop', 'rating', 'notice', 'abroad',
+         'accept', 'bridge', 'bamboo', 'escape',  'excess', 'guitar',
+         'hunter', 'health', 'jumble', 'kitten',
+         'legacy', 'notice', 'radius', 'online']
 
 
 def head():
@@ -35,14 +41,6 @@ def head():
     print(Fore.GREEN + "   ||     ||//     \\||  \\||       ||==== ")
     time.sleep(1)
     print(Fore.RED + "================================================")
-
-
-# A list of words from which the random words will be chose for the game
-words = ['flower', 'nurse', 'house', 'packet', 'rather', 'zebra',
-         'human', 'table', 'laptop', 'rating', 'notice', 'abroad',
-         'accept', 'bridge', 'bamboo', 'escape',  'excess', 'guitar',
-         'hunter', 'health', 'jumble', 'kitten',
-         'legacy', 'notice', 'radius', 'online']
 
 
 def signup_check():
@@ -195,16 +193,19 @@ def play_hangman(random_word):
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(f"{Fore.YELLOW}\n{guess} is already guessed!")
+                time.sleep(.5)
                 print(Fore.WHITE + display_hangman(tries))
                 print(f"{Fore.RED}\n Attempt left: {tries}\n")
             elif guess not in random_word:
                 print(f"{Fore.RED}\n You guessed wrong. Try Again")
+                time.sleep(.5)
                 tries -= 1
                 guessed_letters += guess
                 print(Fore.WHITE + display_hangman(tries))
                 print(f"{Fore.RED}\n Attempt left: {tries}\n")
             else:
                 print(f"{Fore.GREEN}\n Correct! {guess} is in the word.")
+                time.sleep(.5)
                 print(Fore.WHITE + display_hangman(tries))
                 print(f"{Fore.RED}\n Attempt left: {tries}\n")
         else:
@@ -301,6 +302,7 @@ def restart_game():
             print(f"{Fore.GREEN}\nRestarting Game......")
             time.sleep(2.5)
             os.system('clear')
+            head()
             play_hangman(choose_random_word())
         elif answer.upper() == "N":
             time.sleep(1.5)
