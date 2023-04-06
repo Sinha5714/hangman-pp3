@@ -15,15 +15,21 @@
 [UX](#ux)
  - [User Stories](#user-stories)
  - [Site Owner Goals](#site-owner-goals)
- - [Potential Features](#potential-features)
 - [Features](#features)
   - [Existing Features](#existing-features)
   - [Features to be implemented](#features-to-be-implemented)
+- [Technology Used](#technology-used)
+ - [Language used](#language-used)
+ - [Other websites/tools used](#other-websitestools-used)
+ - [3rd Party Python Libraries used](#3rd-party-python-libraries-used)
 - [Testing](#testing)
+  - [Manual Testing](#manual-testing)
   - [Tested Devices with Browsers](#tested-devices-with-browsers)
   - [Validator Testing](#validator-testing)
   - [Unfixed bugs](#unfixed-bugs)
 - [Deployment](#deployment)
+  - [Deploying in Heroku](#deploying-the-website-in-heroko)
+  - [Cloning of Repo](#cloning-the-repository-in-github)
 - [Credits](#credits)
   - [Content](#content)
   - [Code](#code)
@@ -51,8 +57,6 @@
 - Hint letters for the user
 - Add their name to the game
 - Deployment of the game
-### Potential Features
-- 
  
 ## FlowChart
 - [Lucidchart]((https://www.lucidchart.com)) was used to build flowchart
@@ -131,7 +135,7 @@
 - [Colorama](https://pypi.org/project/colorama/) was used for better visual display
 
 ## Testing on Browsers
-- I tested that this page works in different browsers - Chrome and Safari
+- I tested that this game works in different browsers - Chrome and Safari and was able to deploy successfully
 
 ### Manual Testing
 - 
