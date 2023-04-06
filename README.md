@@ -158,7 +158,7 @@
 - It also prompts the users to provide if they are an existing user
 
 <details>
-    <summary>Home Page</summary>
+    <summary>Home Page screenshot</summary>
     <img src="assets/screenshots/gameload.png" alt="Game load page">
 </details>  
 
@@ -169,7 +169,7 @@
 - Once new username and password is entered, it prompts Signup confirmed..
 
 <details>
-    <summary>Sign Up Area</summary>
+    <summary>Sign Up Area screenshot</summary>
     <img src="assets/screenshots/signup.png" alt="Sign up area">
 </details> 
 
@@ -179,7 +179,7 @@
 - Users need to login their details to play the game
 
 <details>
-    <summary>Login Area</summary>
+    <summary>Login Area screenshot</summary>
     <img src="assets/screenshots/login.png" alt="Login area">
 </details> 
 
@@ -191,7 +191,7 @@
 - After rules is displayed game starts automatically
 
 <details>
-    <summary>Rules Area</summary>
+    <summary>Rules Area screenshot</summary>
     <img src="assets/screenshots/rules.png" alt="Rules area">
 </details> 
 
@@ -206,7 +206,7 @@
 - This was done to make the game little exicting
 
 <details>
-    <summary>Game Area</summary>
+    <summary>Game Area screenshot</summary>
     <img src="assets/screenshots/gamedisplay.png" alt="Game area">
 </details> 
 
@@ -218,7 +218,7 @@
 - If not the game will end and user will be logged out
 
 <details>
-    <summary>Restart Game</summary>
+    <summary>Restart Game screenshot</summary>
     <img src="assets/screenshots/restart.png" alt="Restart Game">
 </details> 
 
@@ -319,8 +319,9 @@
 
 ### Validator Testing
 #### PEP8 Python Validator
-- [PEP8 Python Validator](https://pep8ci.herokuapp.com/) was used to validate the code
-- No errors were found
+[PEP8 Python Validator](https://pep8ci.herokuapp.com/) was used to validate the code
+This validator was provided by Code Institute
+ No errors were found
 
 <details>
     <summary>gsheet.py</summary>
