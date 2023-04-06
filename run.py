@@ -3,7 +3,6 @@
 # --------------------
 import random
 import time
-import os
 
 # 3rd Party
 # --------------------
@@ -39,14 +38,6 @@ words = ['flower', 'nurse', 'house', 'packet', 'rather', 'zebra',
          'legacy', 'notice', 'radius', 'online']
 
 
-def clear_screen():
-    """
-    Clears the terminal of content.
-    It is called when the user needs a new "screen" or viewport.
-    """
-    os.system("cls")
-
-
 def signup_check():
     """
     To ask user if they already are signed up if not it promts them
@@ -54,12 +45,13 @@ def signup_check():
     """
     exist_check = input(f"{Fore.CYAN}Are you an existing user? Y/N\n")
     if exist_check.upper() == "Y":
-        return True
+        user_exist()
     elif exist_check.upper() == "N":
-        return False
+        get_user_details()
     else:
         print(f"{Fore.RED}Invalid Input")
-        return signup_check()
+        time.sleep(1)
+        signup_check()
 
 
 def get_user_details():
@@ -69,7 +61,7 @@ def get_user_details():
     to google spread worksheet
     """
     time.sleep(2)
-    print(f"{Fore.GREEN}\nSIGN UP TO PLAY HANGMAN!!!")
+    print(f"{Fore.GREEN}\nSIGN UP HERE!!!")
     time.sleep(2)
     print(f"{Fore.YELLOW}\nInstructions for Signup:-")
     time.sleep(1)
@@ -87,7 +79,6 @@ def get_user_details():
         user_exist()
     else:
         time.sleep(2)
-        clear_screen()
         get_user_details()
 
 
@@ -96,33 +87,29 @@ def user_exist():
     To check if user already exist and validate it by comparing
     the input matches in stored values in google spread worksheet
     """
-    check = input(f"{Fore.GREEN}\nExisting User: LOGIN: Y/N \n")
-    if check.upper() == "Y":
-        time.sleep(1)
-        username = input(Fore.CYAN + "\nUsername: \n")
-        time.sleep(1)
-        password = input(Fore.CYAN + "\nPassword: \n")
-        logins = login_data()
-        check_login = 0
-        for data in logins:
-            if username == data['USERNAME']:
-                if password == data['PASSWORD']:
-                    print("\nLogged in Sucessfully...")
-                    time.sleep(.5)
-                    current_user['name'] = data['USERNAME']
-                    print(f"\nWelcome back {current_user['name']}")
-                else:
-                    print("Incorrect password...")
-                    user_exist()
+    time.sleep(1)
+    print(f"{Fore.GREEN}\nLOGIN TO PLAY HANGMAN!!!")
+    time.sleep(1)
+    username = input(Fore.CYAN + "\nUsername: \n")
+    time.sleep(1)
+    password = input(Fore.CYAN + "\nPassword: \n")
+    logins = login_data()
+    check_login = 0
+    for data in logins:
+        if username == data['USERNAME']:
+            if password == data['PASSWORD']:
+                print("\nLogged in Sucessfully...")
+                time.sleep(.5)
+                current_user['name'] = data['USERNAME']
+                print(f"\nWelcome back {current_user['name']}")
             else:
-                check_login += 1
-        if check_login == len(logins):
-            print("User do not exist.Try again")
-            user_exist()
-    elif check.upper() == "N":
-        get_user_details()
-    else:
-        print("Invalid input. Type Y/N")
+                print("Incorrect password...")
+                user_exist()
+        else:
+            check_login += 1
+    if check_login == len(logins):
+        print("User do not exist.Try again")
+        user_exist()
 
 
 def choose_random_word():
@@ -308,11 +295,7 @@ def main_game():
     """
     Function to call all functions
     """
-    if signup_check():
-        user_exist()
-    else:
-        get_user_details()
-        user_exist()
+    signup_check()
     open_rules()
     play_hangman(choose_random_word())
     restart_game()
