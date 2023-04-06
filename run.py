@@ -159,15 +159,15 @@ def how_to_play():
     print(f"{Fore.CYAN}\nHOW TO PLAY:-")
     time.sleep(0.5)
     print(f"{Fore.YELLOW}Goal: guess the word and save the man!")
-    time.sleep(0.5)
+    time.sleep(1)
     print(f"{Fore.YELLOW}\nEverytime you can type only one letter.")
-    time.sleep(0.5)
+    time.sleep(1)
     print(f"{Fore.YELLOW}\nFor increasing chances of winning:")
     print(f"{Fore.YELLOW}letters 'AEIOU' is already provided ")
     print(f"{Fore.YELLOW}But hints will be provided after first guess")
-    time.sleep(0.5)
+    time.sleep(1)
     print(f"{Fore.YELLOW}\nMake 6 wrong guesses and you lose.")
-    time.sleep(0.5)
+    time.sleep(1)
     print(f"{Fore.YELLOW}\nThe man will die!")
     time.sleep(4)
     print(Fore.GREEN + "\nLet's Play!!!!")
@@ -188,25 +188,21 @@ def play_hangman(random_word):
 
     while tries > 0:
         wrong_letter_count = 0
-        time.sleep(1)
         guess = input(f"{Fore.YELLOW}\n\n Please enter your guess: ").upper()
 
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(f"{Fore.YELLOW}\n{guess} is already guessed!")
-                time.sleep(.5)
                 print(Fore.WHITE + display_hangman(tries))
                 print(f"{Fore.RED}\n Attempt left: {tries}\n")
             elif guess not in random_word:
                 print(f"{Fore.RED}\n You guessed wrong. Try Again")
-                time.sleep(.5)
                 tries -= 1
                 guessed_letters += guess
                 print(Fore.WHITE + display_hangman(tries))
                 print(f"{Fore.RED}\n Attempt left: {tries}\n")
             else:
                 print(f"{Fore.GREEN}\n Correct! {guess} is in the word.")
-                time.sleep(.5)
                 print(Fore.WHITE + display_hangman(tries))
                 print(f"{Fore.RED}\n Attempt left: {tries}\n")
         else:
