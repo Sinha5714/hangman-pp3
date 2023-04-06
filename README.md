@@ -148,7 +148,7 @@
 
 ### Users
 
-1. I want to have clear options to select in the main menu
+1. I want to be able to have an option as existing user or new user
 2. I want to be able to read the rules of the game
 3. I want to able to signup as new user
 4. I want to be able to log-in if I return to the game
@@ -284,6 +284,22 @@
 - I tested that this game works in different browsers - Chrome and Safari and was able to deploy successfully
 
 ### Manual Testing
+
+
+### Manual Testing
+<details><summary>See user stories testing</summary>
+
+1. I want to be able to have an option as existing user or new user
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Are you an existing user | Type Y/N | Open login area / SignUp Area | Works as expected
+<details>
+    <summary>Screenshot</summary>
+    <img src="assets/screenshots/signup.png" alt="Sign up area">
+    <img src="assets/screenshots/login.png" alt="Login area">
+</details> 
+
 #### Updating of Google spreadsheet
 - I tested manually by signing up and checking whether worsheet id being updated.
 - It was getting updated everytime signed up succesfully
