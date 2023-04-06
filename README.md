@@ -142,7 +142,11 @@
 
 - [Lucidchart](https://www.lucidchart.com) was used to build flowchart
 
-![flowchart](/assets/screenshots/lucid.jpeg)
+<details>
+    <summary>Flowchart</summary>
+    <p>Hangman Game Flowchart</p>
+    <img src = "assets/screenshots/lucid.jpeg" alt = "A screenshot of flowchart">
+</details>
 
 ## Features
 ### Existing Features
@@ -316,6 +320,11 @@
 - The website was deployed to Heroko using following steps:
 #### Login or create an account at Heroku
 - Make an account in Heroko and login
+
+<details>
+    <summary>Heroko Login Page</summary>
+    <img src="assets/heroku/heroku_login.png" alt="Heroko login page">
+</details>
 
 ![Login page](/assets/heroku/heroku_login.png)
 
