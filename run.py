@@ -299,7 +299,6 @@ def restart_game():
             print(f"{Fore.GREEN}\nRestarting Game......")
             time.sleep(2.5)
             os.system('clear')
-            head()
             play_hangman(choose_random_word())
         elif answer.upper() == "N":
             time.sleep(1.5)
