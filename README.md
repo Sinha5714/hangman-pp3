@@ -29,6 +29,7 @@
     - [Features to be implemented](#features-to-be-implemented)
 - [Technology Used](#technology-used)
     - [Language used](#language-used)
+    -[Python Libraries used](#python-libraries-used)
     - [Other websites/tools used](#other-websitestools-used)
     - [3rd Party Python Libraries used](#3rd-party-python-libraries-used)
 - [Testing](#testing)
@@ -260,6 +261,12 @@
 
   - Python
 
+### Python Libraries used
+
+- os - used to clear terminal
+- random - used to choose random words
+- time - used to displayed delayed areas in the terminal
+
 ### Other websites/tools used
 
 - [Lucidchart](https://www.lucidchart.com) was used to build flowchart
@@ -355,7 +362,6 @@ No errors were found.
     <p>Result: gsheet.py</p>
     <img src = "assets/screenshots/gsheet.png" alt = "A screenshot of gsheet.py result">
 </details>
-
 
 <details>
     <summary>run.py</summary>
