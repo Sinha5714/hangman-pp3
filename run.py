@@ -3,6 +3,7 @@
 # --------------------
 import random
 import time
+import os
 
 # 3rd Party
 # --------------------
@@ -36,6 +37,14 @@ words = ['flower', 'nurse', 'house', 'packet', 'rather', 'zebra',
          'accept', 'bridge', 'bamboo', 'escape',  'excess', 'guitar',
          'hunter', 'health', 'jumble', 'kitten',
          'legacy', 'notice', 'radius', 'online']
+
+
+def clear_screen():
+    """
+    Clears the terminal of content.
+    It is called when the user needs a new "screen" or viewport.
+    """
+    os.system("cls" if os.name == 'nt' else "clear")
 
 
 def signup_check():
@@ -75,7 +84,9 @@ def get_user_details():
     if validate:
         login = [user_input, user_password]
         update_login_data(login)
+        user_exist()
     else:
+        time.sleep(2)
         get_user_details()
 
 
@@ -87,9 +98,9 @@ def user_exist():
     check = input(f"{Fore.GREEN}\nExisting User: LOGIN: Y/N \n")
     if check.upper() == "Y":
         time.sleep(1)
-        username = input(Fore.CYAN + "\nEnter your username: \n")
+        username = input(Fore.CYAN + "\nUsername: \n")
         time.sleep(1)
-        password = input(Fore.CYAN + "\nEnter your password: \n")
+        password = input(Fore.CYAN + "\nPassword: \n")
         logins = login_data()
         check_login = 0
         for data in logins:

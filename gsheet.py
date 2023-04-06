@@ -22,6 +22,7 @@ USERS = SHEET.worksheet('users')
 def login_data():
     """
     Gets login data from the player and adds it to the users worksheet
+    and also extract data from worksheet for validation
     """
     users_login = USERS.get_all_records()
     return users_login
@@ -67,5 +68,5 @@ def validate_user_details(user, password):
         print(f"Invalid user input: {m}")
         return False
     else:
-        print("\nLogin confirmed....")
+        print("\nSign Up confirmed....")
         return True
