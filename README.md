@@ -19,6 +19,9 @@
     - [Target Audience](#target-audience)
     - [User Requirements and Expectations](#user-requirements-and-expectations)
     - [User Manual](#user-manual)
+- [User Stories](#user-stories)
+    -[Users](#users)
+    -[Site Owner](#site-owner)
 - [Features](#features)
     - [Existing Features](#existing-features)
     - [Features to be implemented](#features-to-be-implemented)
@@ -137,6 +140,24 @@
     - If user input is invalid, an error will be thrown and question will be prompted again
 
 </details>
+
+## User Stories
+
+### Users
+
+1. I want to have clear options to select in the main menu
+2. I want to be able to read the rules of the game
+3. I want to able to signup as new user
+4. I want to be able to log-in if I return to the game
+5. I want to be able to restart game when I'm logged in
+
+### Site Owner
+
+6. I want users to have a positive experience whilst playing the game
+7. I want users to easily select options from the menu
+8. I want user names and password to be saved to Google Spreadsheet
+9. I want the user to get errors displayed in case of wrong input
+10. I want data entry to be validated, to guide the user on how to correctly format the input
 
 ## FlowChart
 
@@ -319,9 +340,11 @@
 
 ### Validator Testing
 #### PEP8 Python Validator
-[PEP8 Python Validator](https://pep8ci.herokuapp.com/) was used to validate the code
-This validator was provided by Code Institute
- No errors were found
+[PEP8 Python Validator](https://pep8ci.herokuapp.com/) was used to validate the code.
+
+This validator was provided by Code Institute.
+
+No errors were found.
 
 <details>
     <summary>gsheet.py</summary>
@@ -442,7 +465,7 @@ This validator was provided by Code Institute
 #### The following code idea was taken from google search and various youtube videos
 
 - play_hangman function; (https://www.youtube.com/shorts/GYCCN0IP8u0)
-- How to clear terminal from google
+- How to clear terminal
 
 
 ### Thank You
