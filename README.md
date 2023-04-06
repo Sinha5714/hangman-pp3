@@ -44,22 +44,18 @@
 - Be able to read the rules
 - Be able to restart the game
 - Be able to use in different media 
+
 ### Site Owner Goals
 
-- Website for a Hangman game
-- Rules for the game
-- Instruction for Signup
-- Login data check
-- Validation for login and signup
-- Log signup data
-- Save signup details in googlespread worksheet
-- Extract login details and check
-- Display of hangman
-- Chances left for user
-- Random words for the game
-- Hint letters for the user
-- Add their name to the game
-- Deployment of the game
+- Create a game which is easy and clear to user
+- Ensure that new user is able to signup
+- Ensure that existing user can login
+- Ensure errors are handled and displayed to user
+- Ensure that user is able to understand the game
+- Ensure that user can read the rules of the game
+- Ensure that user can restart the game
+
+
  
 ## FlowChart
 
