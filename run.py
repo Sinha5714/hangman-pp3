@@ -298,7 +298,6 @@ def restart_game():
             print(f"{Fore.CYAN}\nTRY YOUR LUCK AGAIN!!")
             print(f"{Fore.GREEN}\nRestarting Game......")
             time.sleep(2.5)
-            os.system('clear')
             play_hangman(choose_random_word())
         elif answer.upper() == "N":
             time.sleep(1.5)
@@ -306,6 +305,7 @@ def restart_game():
             time.sleep(1.5)
             print(f"{Fore.LIGHTCYAN_EX}\nLogging Out....")
             time.sleep(3)
+            os.system('clear')
             break
         else:
             print(f"{Fore.RED}Invalid input. Type Y/N")
