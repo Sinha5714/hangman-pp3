@@ -190,7 +190,10 @@
 - User can decide to see the rules or directly start the game
 - After rules is displayed game starts automatically
 
-![An image of rules page](assets/screenshots/rules.png)
+<details>
+    <summary>Rules Area</summary>
+    <img src="assets/screenshots/rules.png" alt="Rules area">
+</details> 
 
 #### Game display Area
 
@@ -202,7 +205,10 @@
 - Once player guess a letter, the hint letters are displayed
 - This was done to make the game little exicting
 
-![An image of quiz area](assets/screenshots/gamedisplay.png)
+<details>
+    <summary>Game Area</summary>
+    <img src="assets/screenshots/gamedisplay.png" alt="Game area">
+</details> 
 
 #### Restart Game
 
@@ -211,7 +217,10 @@
 - If they decide to play again, the game will restart
 - If not the game will end and user will be logged out
 
-![An image of end page](assets/screenshots/restart.png)
+<details>
+    <summary>Restart Game</summary>
+    <img src="assets/screenshots/restart.png" alt="Restart Game">
+</details> 
 
 ### Features to be implemented
 
@@ -313,13 +322,19 @@
 - [PEP8 Python Validator](https://pep8ci.herokuapp.com/) was used to validate the code
 - No errors were found
 
-- Result: gsheet.py
+<details>
+    <summary>gsheet.py</summary>
+    <p>Result: gsheet.py</p>
+    <img src = "assets/screenshots/gsheet.png" alt = "A screenshot of gsheet.py result">
+</details>
 
 ![gsheet.py result](/assets/screenshots/gsheet.png)
 
-- Result: run.py
-
-![run.py result](/assets/screenshots/run-valid.png)
+<details>
+    <summary>Flowchart</summary>
+    <p>Result: run.py</p>
+    <img src = "assets/screenshots/run-valid.png" alt = "A screenshot of run.py result">
+</details>
 
 ### Unfixed Bugs
 - No unfixed bugs.
