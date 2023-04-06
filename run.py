@@ -3,6 +3,7 @@
 # --------------------
 import random
 import time
+import os
 
 # 3rd Party
 # --------------------
@@ -17,18 +18,24 @@ from gsheet import validate_user_details
 
 current_user = {'name': 'Remo'}
 
-print(Fore.RED + "================================================")
-time.sleep(1)
-print(Fore.GREEN + "||   ||   // \\  ||\\  || ||¯¯¯¯    ||========= ")
-print(Fore.GREEN + "||===||  //===\\ || \\ || ||  ||=|| ||      | ")
-print(Fore.GREEN + "||   || //     \\||  \\|| ||__|| || ||      |")
-time.sleep(1.5)
-print(Fore.GREEN + "==================================||      O ")
-print(Fore.GREEN + "   ||\\  //||  // \\  ||\\  ||       ||     /|\\ ")
-print(Fore.GREEN + "   || \\// || //===\\ || \\ ||       ||     / \\ ")
-print(Fore.GREEN + "   ||     ||//     \\||  \\||       ||==== ")
-time.sleep(1)
-print(Fore.RED + "================================================")
+
+def head():
+    """
+    Function to display head of the game
+    """
+    print(Fore.RED + "================================================")
+    time.sleep(1)
+    print(Fore.GREEN + "||   ||   // \\  ||\\  || ||¯¯¯¯    ||========= ")
+    print(Fore.GREEN + "||===||  //===\\ || \\ || ||  ||=|| ||      | ")
+    print(Fore.GREEN + "||   || //     \\||  \\|| ||__|| || ||      |")
+    time.sleep(1.5)
+    print(Fore.GREEN + "==================================||      O ")
+    print(Fore.GREEN + "   ||\\  //||  // \\  ||\\  ||       ||     /|\\ ")
+    print(Fore.GREEN + "   || \\// || //===\\ || \\ ||       ||     / \\ ")
+    print(Fore.GREEN + "   ||     ||//     \\||  \\||       ||==== ")
+    time.sleep(1)
+    print(Fore.RED + "================================================")
+
 
 # A list of words from which the random words will be chose for the game
 words = ['flower', 'nurse', 'house', 'packet', 'rather', 'zebra',
@@ -76,6 +83,8 @@ def get_user_details():
     if validate:
         login = [user_input, user_password]
         update_login_data(login)
+        time.sleep(2)
+        os.system('clear')
         user_exist()
     else:
         time.sleep(2)
@@ -99,9 +108,11 @@ def user_exist():
         if username == data['USERNAME']:
             if password == data['PASSWORD']:
                 print("\nLogged in Sucessfully...")
-                time.sleep(.5)
+                time.sleep(2)
+                os.system('clear')
+                head()
                 current_user['name'] = data['USERNAME']
-                print(f"\nWelcome back {current_user['name']}")
+                print(f"{Fore.GREEN}\nWelcome back {current_user['name']}")
             else:
                 print("Incorrect password...")
                 user_exist()
@@ -132,10 +143,12 @@ def open_rules():
             print(f"{Fore.GREEN}\nLoading Rules......")
             time.sleep(2)
             how_to_play()
+            os.system('clear')
             break
         elif show_rules.upper() == "N":
             print(f"{Fore.GREEN}\nStarting Game....\n")
             time.sleep(2)
+            os.system('clear')
             break
         else:
             print(f"{Fore.RED}\nInvalid input. Please enter Y or N\n")
@@ -287,10 +300,15 @@ def restart_game():
             print(f"{Fore.CYAN}\nTRY YOUR LUCK AGAIN!!")
             print(f"{Fore.GREEN}\nRestarting Game......")
             time.sleep(2.5)
+            os.system('clear')
             play_hangman(choose_random_word())
         elif answer.upper() == "N":
             time.sleep(1.5)
             print(f"{Fore.LIGHTCYAN_EX}\nGood Bye!!")
+            time.sleep(1.5)
+            print(f"{Fore.LIGHTCYAN_EX}\nLogging Out....")
+            time.sleep(3)
+            os.system('clear')
             break
         else:
             print(f"{Fore.RED}Invalid input. Type Y/N")
@@ -300,6 +318,7 @@ def main_game():
     """
     Function to call all functions
     """
+    head()
     signup_check()
     open_rules()
     play_hangman(choose_random_word())
