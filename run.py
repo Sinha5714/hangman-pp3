@@ -153,6 +153,7 @@ def how_to_play():
     time.sleep(0.5)
     print(f"{Fore.YELLOW}\nFor increasing chances of winning:")
     print(f"{Fore.YELLOW}letters 'AEIOU' is already provided ")
+    print(f"{Fore.YELLOW}But hints will be provided after first guess")
     time.sleep(0.5)
     print(f"{Fore.YELLOW}\nMake 6 wrong guesses and you lose.")
     time.sleep(0.5)
@@ -172,6 +173,7 @@ def play_hangman(random_word):
     tries = 6
     print(Fore.WHITE + display_hangman(tries))
     print(f"{Fore.RED}\n Total Attempts: {tries}\n")
+    print(" _ " * 6)
 
     while tries > 0:
         wrong_letter_count = 0
