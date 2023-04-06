@@ -15,6 +15,7 @@
 - [Project Goals](#project-goals)
  - [User Stories](#user-stories)
  - [Site Owner Goals](#site-owner-goals)
+- [User Experience](#user-experience)
 - [Features](#features)
   - [Existing Features](#existing-features)
   - [Features to be implemented](#features-to-be-implemented)
@@ -55,7 +56,13 @@
 - Ensure that user can read the rules of the game
 - Ensure that user can restart the game
 
+## User Experience
+### Target Audience
+- There is no specific audience for the game. 
+- But it displays a dead man cartoon image so adults can decide if it's ok for their children to play or not
+- I would recommend that its also a game to improve vocabulary so children above 8 years can play
 
+### User Requirements and Expectations
  
 ## FlowChart
 
