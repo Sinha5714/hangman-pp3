@@ -157,6 +157,16 @@
 
 ![worsheet](/assets/screenshots/worksheet.png)
 
+#### User Exist 
+- Once the users load the game, they are promt to confirm if they are new user or existing user.
+- If the input provided is not "Y" or "N", it throws error.
+- If the input is "Y", the login area opens
+- If the input is "N", the sign up area opens
+- I tried it personally and the error for invalid input was thrown.
+- No errors found
+
+![Exist user error](/assets/screenshots/errorexist.png)
+
 #### Sign Up
 
 - I signed up personally and asked my husband to do also
@@ -164,6 +174,8 @@
 - If username existed before it was throwing error
 - Once sign up was confirmed the worsheet was updating
 - No error found
+
+![SignUp error](/assets/screenshots/errorsignup.png)
 
 #### Login
 
@@ -173,13 +185,17 @@
 - It was able to extract data from worksheet to validate username and password
 - No errors found
 
-#### Start Game
+![Login error](/assets/screenshots/errorlogin.png)
+
+#### Rules Area
 
 - Once login was successful, game started prompting user to see rules or not
 - If user enter invalid input, an error was thrown and question was prompted again
 - If user decides to see rules, rules were displayed and game starts automatically.
 - If user do not want to see rules, game starts automatically
 - No errors found
+
+![Rules error](/assets/screenshots/errorrules.png)
 
 #### Restart Game
 
@@ -189,6 +205,7 @@
 - If not game will end and user will be logged out
 - No errors found
 
+![Restart Error](/assets/screenshots/errorrestart.png)
 
 ### Tested Devices with Browsers
 - iPhone 12
