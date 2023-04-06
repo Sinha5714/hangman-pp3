@@ -235,8 +235,9 @@
 ## Deployment
 
 ### Deploying the website in Heroko:
-- The website was deployed to heroko using following steps:
-  - Login or create an account at Heroku
+- The website was deployed to Heroko using following steps:
+#### Login or create an account at Heroku
+- Make an account in Heroko and login
 
 ![Login page](/assets/heroku/heroku_login.png)
 
@@ -249,39 +250,39 @@
 
 #### Open settings Tab
   ##### Click on config var
-     - Store CREDS file from gitpod in key and add the values
-     - Store PORT in key and value
+  - Store CREDS file from gitpod in key and add the values
+  - Store PORT in key and value
 
 ![Config var](/assets/heroku/config.png)
 
   ##### Add Buildpacks
-     - Add python buildpack first
-     - Add Nodejs buildpack after that
+  - Add python buildpack first
+  - Add Nodejs buildpack after that
 
 ![buildpacks](/assets/heroku/buildpacks.png)
 
  #### Open Deploy Tab
    ##### Choose deployment method
-     - Connect GITHUB
-     - Login if prompted
+  - Connect GITHUB
+  - Login if prompted
 
 ![connect github](/assets/heroku/method.png)
 
    ##### Connect to Github
-     - Choose repositories you want to connect
-     - Click "Connect"
+  - Choose repositories you want to connect
+  - Click "Connect"
 
 ![connect](/assets/heroku/repo-connect.png)
 
   ##### Automatic and Manual deploy
-     - Choose a method to deploy
-     - After Deploy is clicked it will install various file
+  - Choose a method to deploy
+  - After Deploy is clicked it will install various file
 
 ![deploy](/assets/heroku/deploy.png)
 
   ##### Final Deployment
-     - A view button will display
-     - Once clicked the website will open
+  - A view button will display
+  - Once clicked the website will open
 
 ![view](/assets/heroku/view.png)
 
