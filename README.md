@@ -63,7 +63,11 @@
 - I would recommend that its also a game to improve vocabulary so children above 8 years can play
 
 ### User Requirements and Expectations
- 
+- A simple and fun game
+- Straightforward Navigation
+- Game personalisation by entering players' names
+- Log-in works as expected and incorrect details do not allow the user access to their account.
+
 ## FlowChart
 
 - [Lucidchart](https://www.lucidchart.com) was used to build flowchart
