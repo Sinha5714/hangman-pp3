@@ -188,6 +188,7 @@ def play_hangman(random_word):
 
     while tries > 0:
         wrong_letter_count = 0
+        time.sleep(1)
         guess = input(f"{Fore.YELLOW}\n\n Please enter your guess: ").upper()
 
         if len(guess) == 1 and guess.isalpha():
