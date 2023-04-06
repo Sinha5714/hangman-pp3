@@ -212,7 +212,7 @@ def play_hangman(random_word):
             print("\nYou saved the man:)")
             break
         if tries == 0:
-            print(f" You lose. The secret word was {random_word}.\n")
+            print(f"{Fore.GREEN}Missed:( The secret word was {random_word}.\n")
 
     return tries
 
