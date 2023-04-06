@@ -20,8 +20,10 @@
     - [User Requirements and Expectations](#user-requirements-and-expectations)
     - [User Manual](#user-manual)
 - [User Stories](#user-stories)
-    -[Users](#users)
-    -[Site Owner](#site-owner)
+    - [Users](#users)
+    - [Site Owner](#site-owner)
+- [Teachnical Design](#technical-design)
+    - [Flowchart](#flowchart)
 - [Features](#features)
     - [Existing Features](#existing-features)
     - [Features to be implemented](#features-to-be-implemented)
@@ -158,6 +160,8 @@
 8. I want user names and password to be saved to Google Spreadsheet
 9. I want the user to get errors displayed in case of wrong input
 10. I want data entry to be validated, to guide the user on how to correctly format the input
+
+## Technical Design
 
 ## FlowChart
 
