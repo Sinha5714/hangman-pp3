@@ -12,7 +12,7 @@
 ![An image previewing all devices](/assets/screenshots/preview.png)
 
 ## Contents
-[UX](#ux)
+- [Project Goals](#project-goals)
  - [User Stories](#user-stories)
  - [Site Owner Goals](#site-owner-goals)
 - [Features](#features)
@@ -35,14 +35,15 @@
   - [Code](#code)
 - [Thank You](#thank-you)
 
-## UX
+## Project Goals
 ### User Stories
 
 - Play Hangman game
-- Signup to play game as a first time user
-- Login to play game as existing user
-- Able to restart the game
-- Able to use in different media 
+- Be able to sign up as new user
+- Be able to login as existing user
+- Be able to read the rules
+- Be able to restart the game
+- Be able to use in different media 
 ### Site Owner Goals
 
 - Website for a Hangman game
