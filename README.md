@@ -154,10 +154,13 @@
 #### Home page display
 
 - Once the user run the program this area is displayed
-- The area consist of a display showing the heading as provided in image
+- The area consist of a display showing the heading
 - It also prompts the users to provide if they are an existing user
-    
-  ![An image of home display](/assets/screenshots/gameload.png)
+
+<details>
+    <summary>Home Page</summary>
+    <img src="assets/screenshots/gameload.png" alt="Game load page">
+</details>  
 
 #### User Signup Area
 
@@ -165,14 +168,21 @@
 - This area is displayed when player is not an existing user
 - Once new username and password is entered, it prompts Signup confirmed..
 
-![An image of Username Entry Page](/assets/screenshots/signup.png)
+<details>
+    <summary>Sign Up Area</summary>
+    <img src="assets/screenshots/signup.png" alt="Sign up area">
+</details> 
 
 #### User Login Area
 
 - This area is displayed if user is an existing user
 - Users need to login their details to play the game
 
-![An image of High Score Area](assets/screenshots/login.png)
+<details>
+    <summary>Login Area</summary>
+    <img src="assets/screenshots/login.png" alt="Login area">
+</details> 
+
 
 #### Rules for the Game
 
@@ -326,7 +336,6 @@
     <img src="assets/heroku/heroku_login.png" alt="Heroko login page">
 </details>
 
-![Login page](/assets/heroku/heroku_login.png)
 
 #### Creating an app
   - Create new app in the top right of the screen and add an app name.
