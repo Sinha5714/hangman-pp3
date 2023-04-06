@@ -307,7 +307,6 @@ def restart_game():
             time.sleep(1.5)
             print(f"{Fore.LIGHTCYAN_EX}\nLogging Out....")
             time.sleep(3)
-            os.system('clear')
             break
         else:
             print(f"{Fore.RED}Invalid input. Type Y/N")
