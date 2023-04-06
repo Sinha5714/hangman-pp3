@@ -240,46 +240,46 @@
 
 ![Login page](/assets/heroku/heroku_login.png)
 
-- Creating an app
+#### Creating an app
   - Create new app in the top right of the screen and add an app name.
   - Select region
   - Then click "create app".
 
 ![create app](/assets/heroku/createapp.png)
 
-- Open settings Tab
-  - Click on config var
+#### Open settings Tab
+  ##### Click on config var
      - Store CREDS file from gitpod in key and add the values
      - Store PORT in key and value
 
 ![Config var](/assets/heroku/config.png)
 
-  - Add Buildpacks
+  ##### Add Buildpacks
      - Add python buildpack first
      - Add Nodejs buildpack after that
 
 ![buildpacks](/assets/heroku/buildpacks.png)
 
- - Open Deploy Tab
-   - Choose deployment method
+ #### Open Deploy Tab
+   ##### Choose deployment method
      - Connect GITHUB
      - Login if prompted
 
 ![connect github](/assets/heroku/method.png)
 
-   - Connect to Github
+   ##### Connect to Github
      - Choose repositories you want to connect
      - Click "Connect"
 
 ![connect](/assets/heroku/repo-connect.png)
 
-  - Automatic and Manual deploy
+  ##### Automatic and Manual deploy
      - Choose a method to deploy
      - After Deploy is clicked it will install various file
 
 ![deploy](/assets/heroku/deploy.png)
 
-  - Final Deployment
+  ##### Final Deployment
      - A view button will display
      - Once clicked the website will open
 
