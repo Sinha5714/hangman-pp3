@@ -63,65 +63,48 @@
 ### Existing Features
 
 #### Home page display
-- The main page will be displayed once the website is open.
-- It consists of a heading, a small description of the game and three buttons.
-- Each button has seperate function:
-    - Play button : Opens the Username entry page
-    - How to Play button : Opens the rules page of the quiz
-    - High Scores button : Opens the page for high score table
+- Once the user run the program this area is displayed
+- The area consist of a display showing the heading as provided in image
+- It also prompts the users to provide if they are an existing user
     
   ![An image of home display](/assets/screenshots/gameload.png)
 
-#### Rules for the Game
-  - This page opens once the "How To Play" button is clicked on main-page.
-  - This page consists of rules about how to play the game and a "Home" button.
-  - Once the Home button is clicked, user goes back to the main-page.
-
-![An image of rules page](assets/screenshots/rules.png)
-
 #### User Signup Area
-- This page opens when "Play" button is clicked in the main page.
-- This page consists of a heading, an input field for user to enter the name and a "Start Game" button.
-- Once the "Start Game" button is clicked user can start playing the quiz.
+- This area display an instruction for signup for new users
+- This area is displayed when player is not an existing user
+- Once new username and password is entered, it prompts Signup confirmed..
 
-![An image of Username Entry Page](/assets/screenshots/username.png)
+![An image of Username Entry Page](/assets/screenshots/signup.png)
 
 #### User Login Area
-- This page opens when "High Scores" button is clicked in main page.
-- This page consists of a heading, a table with Table heading of "USERNAME" and "SCORES" and a Home button.
-- Once the "Home" button is clicked, user will go back to main-page.
+- This area is displayed if user is an existing user
+- Users need to login their details to play the game
 
 ![An image of High Score Area](assets/screenshots/login.png)
 
-#### Game display Area
-- This page opens when "Start Game" button is clicked in Username Entry Page.
-- This page consists of the following:
-    - A heading
-    - A welcome message with Username value in it
-    - An area for question image
-    - Four option buttons
-    - Restart button
-    - Next button
-    - Score area
-    - Timer 
-- Once the page is loaded, the timer starts with a coundown of 15 seconds for user to choose an option.
-- The score is 10 for per correct answer and will be displayed in the score area.
-- Next button is to go to the next question.
-- Restart button is provided for user to restart the game in the same quiz page. 
+#### Rules for the Game
+- This area shows the rule of the game
+- User can decide to see the rules or directly start the game
+- After rules is displayed game starts automatically
 
+![An image of rules page](assets/screenshots/rules.png)
+
+#### Game display Area
+- This area is displayed once the user read the rules or decide to skip the rules
+- Initial Display
+  - Hangman initial stage
+  - Attempts left
+  - Six " _ " depicting secret word
+- Once player guess a letter, the hint letters are displayed
+- This was done to make the game little exicting
 
 ![An image of quiz area](assets/screenshots/gamedisplay.png)
 
 #### Restart Game 
-- This page opens automatically after the 10 quiz questions have been played.
-- This page consists of :
-    - A heading
-    - A congratulation message: 
-        - Number of total correct question attempted
-        - Score obtained by the user
-    - Save High Score button
-    - Home button
-- Once "Save High Score" button is clicked, username and scores will be added to the high score table and "High Score Page" will be opened.
+- Once the play has played the game, they recieve a promt if they want to play again or not
+- This is provided for both kind of players: Losers or Winners
+- If they decide to play again, the game will restart
+- If not the game will end and user will be logged out
 
 ![An image of end page](assets/screenshots/restart.png)
 
@@ -129,6 +112,7 @@
 - More random words
 - Better display
 - Different levels as per the size of words
+- Multiple logins for multiple player game
 - Adding score and logging it
 
 ## Technology Used
