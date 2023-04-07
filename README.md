@@ -316,6 +316,7 @@
 </details> 
 
 3. I want to be able to log-in if I return to the game
+
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
 | Login To Play Hangman | Username/ Password | Login Successful : Open rules | Works as expected
@@ -324,11 +325,25 @@
     <summary>Screenshots</summary>
     <p>Log In Area</p>
     <img src="assets/screenshots/ustory1-login.png" alt="Login area">   
-    <p>Open rules is prompt after login is successful</p>
+    <p>Open rules is prompted after login is successful</p>
     <img src="assets/screenshots/ustory3.png" alt="Open rules">
 </details> 
 
+4. I want to be able to read the rules of the game
 
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Open Rules  | Type Y/N| Y: Open rules/ N: Starts Game | Works as expected
+
+<details>
+    <summary>Screenshots</summary>   
+    <p>Open rules is prompted</p>
+    <img src="assets/screenshots/ustory3.png" alt="Open rules">
+    <p>If user input is "Y"
+    <img src="assets/screenshots/rules.png" alt="Rules of the game">
+    <p>If user input is "N"
+    <img src="assets/screenshots/gamestart.png" alt="Game started">
+</details> 
 #### Updating of Google spreadsheet
 - I tested manually by signing up and checking whether worsheet id being updated.
 - It was getting updated everytime signed up succesfully
