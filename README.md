@@ -394,62 +394,28 @@
 
 <details>
     <summary>Screenshots</summary>
-    <img src="assets/screenshots/errorexist.png" alt="User Exist area">
+    <img src="assets/screenshots/us9.png" alt="User Exist area">
     <img src="assets/screenshots/errorsignup.png" alt="Sign up area">
     <img src="assets/screenshots/errorlogin.png" alt="Login area">
     <img src="assets/screenshots/errorrules.png" alt="Open rules"> 
     <img src="assets/screenshots/errorrestart.png" alt="Restart Question">
 </details>
 
-#### User Exist 
-- Once the users load the game, they are promt to confirm if they are new user or existing user.
-- If the input provided is not "Y" or "N", it throws error.
-- If the input is "Y", the login area opens
-- If the input is "N", the sign up area opens
-- I tried it personally and the error for invalid input was thrown.
-- No errors found
+9. I want data entry to be validated, to guide the user on how to correctly format the input
 
-![Exist user error](/assets/screenshots/errorexist.png)
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Across all screen | User inputs invalid data | Feedback message with instructions diplayed to the user | Works as expected |
 
-#### Sign Up
-
-- I signed up personally and asked my husband to do also
-- When the username and password were less than 4 characters it was throwing error
-- If username existed before it was throwing error
-- Once sign up was confirmed the worsheet was updating
-- No error found
-
-![SignUp error](/assets/screenshots/errorsignup.png)
-
-#### Login
-
-- After signing up I and my husband logged in again
-- Once the username and password entered was correct, login was successful
-- If it was wrong, an error was thrown and asked to login again
-- It was able to extract data from worksheet to validate username and password
-- No errors found
-
-![Login error](/assets/screenshots/errorlogin.png)
-
-#### Rules Area
-
-- Once login was successful, game started prompting user to see rules or not
-- If user enter invalid input, an error was thrown and question was prompted again
-- If user decides to see rules, rules were displayed and game starts automatically.
-- If user do not want to see rules, game starts automatically
-- No errors found
-
-![Rules error](/assets/screenshots/errorrules.png)
-
-#### Restart Game
-
-- Once user is done with playing, they are prompted if they want to restart or not.
-- If user enters invalid input, error is thrown and question is ask again
-- If user wants to continue, the game will restart
-- If not game will end and user will be logged out
-- No errors found
-
-![Restart Error](/assets/screenshots/errorrestart.png)
+<details>
+    <summary>Screenshots</summary>
+    <img src="assets/screenshots/us9.png" alt="User Exist area">
+    <img src="assets/screenshots/signU9.png" alt="Sign up area">
+    <img src="assets/screenshots/loginUS9.png" alt="Login area">
+    <img src="assets/screenshots/errorrules.png" alt="Open rules"> 
+    <img src="assets/screenshots/errorrestart.png" alt="Restart Question">
+</details>
+</details>
 
 ### Testing on Browsers
 - I tested that this game works in different browsers - Chrome and Safari and was able to deploy successfully
