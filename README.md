@@ -361,6 +361,21 @@
     <img src ="assets/screenshots/ustory5.png" alt="Game ends">   
 </details>
 
+6. I want users to have a positive experience whilst playing the game
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Across all screen | Simple navigation and game play  | Colored messages and straightforward instructions | Works as expected |
+
+<details>
+    <summary>Screenshots</summary>
+    <img src="assets/screenshots/ustory1-signup.png" alt="Sign up area">
+    <img src="assets/screenshots/userstory2.png" alt="Login area">
+    <img src="assets/screenshots/ustory3.png" alt="Open rules"> 
+    <img src="assets/screenshots/restartq.png" alt="Restart Question">
+</details>
+
+
 #### Updating of Google spreadsheet
 - I tested manually by signing up and checking whether worsheet id being updated.
 - It was getting updated everytime signed up succesfully
