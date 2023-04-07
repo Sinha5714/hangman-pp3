@@ -1,4 +1,3 @@
-
 # Hangman 
 
 - Hangman as the name suggest is a game for saving a man from "Hang Till Death" situation.
@@ -39,7 +38,8 @@
     - [Bugs and Fixes](#bugs-and-fixes)
 - [Deployment](#deployment)
     - [Deploying in Heroku](#deploying-the-website-in-heroko)
-    - [Cloning of Repo](#cloning-the-repository-in-github)
+    - [Forking the GitHub Repository](#forking-the-github-repository)
+    - [Cloning of Repository i GitHub](#cloning-the-repository-in-github)
 - [Credits](#credits)
     - [Content](#content)
     - [Code](#code)
@@ -556,6 +556,11 @@ No errors were found.
     <img src="assets/heroku/view.png" alt="view screenshot">
 </details>
 
+### Forking the GitHub Repository
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner
+3. You will then have a copy of the repository in your own GitHub account.
+4. [GitHub Repository](https://github.com/Sinha5714/hangman-pp3)
 
 ### Cloning the repository in GitHub
 1. Visit the GitHub page of the website's repository
@@ -564,6 +569,7 @@ No errors were found.
 4. Click on the copy button next to the link to copy it
 5. Open your IDE
 6. Type ```git clone <copied URL>``` into the terminal
+
 
 ## Credits
 
