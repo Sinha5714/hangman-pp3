@@ -62,7 +62,7 @@ def signup_check():
 def get_user_details():
     """
     To get the user detail for sign up and validate
-    the input provided and after validation append the input
+    the input provided and after validation, append the input
     to google spread worksheet
     """
     time.sleep(2)
@@ -177,8 +177,9 @@ def how_to_play():
 def play_hangman(random_word):
     """
     Function for the game which inherit randomWord from randomWord function
-    and run a loop until no tries left. Also player win if the tries are left
-    and wrong_letter provided is zero
+    and run a while loop until no tries left. The function displays the game
+    as the loop runs and validates if inputs by user is wrong and prompt
+    users of the errors
     """
     guessed_letters = "AEIOU"
     tries = 6
