@@ -280,11 +280,11 @@
 - [Google OAuth](https://google-auth.readthedocs.io/en/stable/reference/google.oauth2.credentials.html) was used to connect the project with the google account.
 - [Colorama](https://pypi.org/project/colorama/) was used for better visual display
 
-## Testing on Browsers
-- I tested that this game works in different browsers - Chrome and Safari and was able to deploy successfully
-
-### Manual Testing
-
+## Testing
+- Manual testing of user stories
+- Testing on Browsers
+- Tested Devices with Browsers
+- Validator Testing
 
 ### Manual Testing
 <details><summary>See user stories testing</summary>
@@ -293,11 +293,13 @@
 
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
-| Are you an existing user | Type Y/N | Open login area / SignUp Area | Works as expected
+| Are you an existing user | Type Y/N | Y: Open login area / N: SignUp Area | Works as expected
 <details>
-    <summary>Screenshot</summary>
-    <img src="assets/screenshots/signup.png" alt="Sign up area">
-    <img src="assets/screenshots/login.png" alt="Login area">
+    <summary>Screenshots</summary>
+    <p>Sign Up</p>
+    <img src="assets/screenshots/ustory1-signup.png" alt="Sign up area">
+    <p>Log In</p>
+    <img src="assets/screenshots/ustory1-login.png" alt="Login area">
 </details> 
 
 #### Updating of Google spreadsheet
@@ -355,6 +357,9 @@
 - No errors found
 
 ![Restart Error](/assets/screenshots/errorrestart.png)
+
+### Testing on Browsers
+- I tested that this game works in different browsers - Chrome and Safari and was able to deploy successfully
 
 ### Tested Devices with Browsers
 - iPhone 12
