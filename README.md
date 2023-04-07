@@ -149,9 +149,9 @@
 ### Users
 
 1. I want to be able to have an option as existing user or new user
-2. I want to be able to read the rules of the game
-3. I want to able to signup as new user
-4. I want to be able to log-in if I return to the game
+2. I want to able to signup as new user
+3. I want to be able to log-in if I return to the game
+4. I want to be able to read the rules of the game
 5. I want to be able to restart game when I'm logged in
 
 ### Site Owner
@@ -300,6 +300,18 @@
     <img src="assets/screenshots/ustory1-signup.png" alt="Sign up area">
     <p>Log In</p>
     <img src="assets/screenshots/ustory1-login.png" alt="Login area">
+</details> 
+
+2. I want to able to signup as new user
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Sign Up Here | Enter New Username/ Enter New Password | Sign Up Complete : Login Page opens | Works as expected
+<details>
+    <summary>Screenshots</summary>
+    <p>Sign Up Area</p>
+    <img src="assets/screenshots/signup.png" alt="Sign up area">
+    <p>Login area opens after sign up is confirmed</p>
+    <img src="assets/screenshots/userstory2.png" alt="Login area">
 </details> 
 
 #### Updating of Google spreadsheet
