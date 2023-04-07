@@ -157,10 +157,9 @@
 ### Site Owner
 
 6. I want users to have a positive experience whilst playing the game
-7. I want users to easily select options from the menu
-8. I want user names and password to be saved to Google Spreadsheet
-9. I want the user to get errors displayed in case of wrong input
-10. I want data entry to be validated, to guide the user on how to correctly format the input
+7. I want user names and password to be saved to Google Spreadsheet
+8. I want the user to get errors displayed in case of wrong input
+9. I want data entry to be validated, to guide the user on how to correctly format the input
 
 ## Technical Design
 
@@ -375,12 +374,32 @@
     <img src="assets/screenshots/restartq.png" alt="Restart Question">
 </details>
 
+7. I want user name and password to be saved to Google Spreadsheet
 
-#### Updating of Google spreadsheet
-- I tested manually by signing up and checking whether worsheet id being updated.
-- It was getting updated everytime signed up succesfully
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Sign-Up | Users input their name and password which has not been previously registered  | Username and password are saved to Google Spreadsheet| Works as expected |
 
-![worsheet](/assets/screenshots/worksheet.png)
+<details>
+    <summary>Screenshots</summary>
+    <p>Google Spread Worksheet</p>
+    <img src="assets/screenshots/worksheet.png" alt="Worksheet">      
+</details> 
+
+8. I want the user to get errors displayed in case of wrong input
+
+ **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Across all screen | User inputs invalid input when questions are prompted. User inputs invalid value during log-in or sign-up | Feedback message displayed to the user | Works as expected |
+
+<details>
+    <summary>Screenshots</summary>
+    <img src="assets/screenshots/errorexist.png" alt="User Exist area">
+    <img src="assets/screenshots/errorsignup.png" alt="Sign up area">
+    <img src="assets/screenshots/errorlogin.png" alt="Login area">
+    <img src="assets/screenshots/errorrules.png" alt="Open rules"> 
+    <img src="assets/screenshots/errorrestart.png" alt="Restart Question">
+</details>
 
 #### User Exist 
 - Once the users load the game, they are promt to confirm if they are new user or existing user.
