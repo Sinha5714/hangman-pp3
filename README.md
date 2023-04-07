@@ -303,6 +303,7 @@
 </details> 
 
 2. I want to able to signup as new user
+
 | **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
 | Sign Up Here | Enter New Username/ Enter New Password | Sign Up Complete : Login Page opens | Works as expected
@@ -313,6 +314,20 @@
     <p>Login area opens after sign up is confirmed</p>
     <img src="assets/screenshots/userstory2.png" alt="Login area">
 </details> 
+
+3. I want to be able to log-in if I return to the game
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Login To Play Hangman | Username/ Password | Login Successful : Open rules | Works as expected
+
+<details>
+    <summary>Screenshots</summary>
+    <p>Log In Area</p>
+    <img src="assets/screenshots/ustory1-login.png" alt="Login area">   
+    <p>Open rules is prompt after login is successful</p>
+    <img src="assets/screenshots/ustory3.png" alt="Open rules">
+</details> 
+
 
 #### Updating of Google spreadsheet
 - I tested manually by signing up and checking whether worsheet id being updated.
