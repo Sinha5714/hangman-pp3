@@ -339,11 +339,28 @@
     <summary>Screenshots</summary>   
     <p>Open rules is prompted</p>
     <img src="assets/screenshots/ustory3.png" alt="Open rules">
-    <p>If user input is "Y"
+    <p>If user input is "Y"</p>
     <img src="assets/screenshots/rules.png" alt="Rules of the game">
-    <p>If user input is "N"
+    <p>If user input is "N"</p>
     <img src="assets/screenshots/gamestart.png" alt="Game started">
 </details> 
+
+5. I want to be able to restart game when I'm logged in
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Restart Game  | Type Y/N| Y: Game restarts/ N: Game ends, User logged out | Works as expected
+
+<details>
+    <summary>Screenshots</summary>   
+    <p>Restart is prompted</p>
+    <img src="assets/screenshots/restartq.png" alt="Restart Question">
+    <p>If user input is "Y"</p>
+    <img src="assets/screenshots/restart.png" alt="Game restarts">
+    <p>If user input is "N"</p>
+    <img src ="assets/screenshots/ustory5.png" alt="Game ends">   
+</details>
+
 #### Updating of Google spreadsheet
 - I tested manually by signing up and checking whether worsheet id being updated.
 - It was getting updated everytime signed up succesfully
