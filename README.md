@@ -36,7 +36,7 @@
     - [Manual Testing](#manual-testing)
     - [Tested Devices with Browsers](#tested-devices-with-browsers)
     - [Validator Testing](#validator-testing)
-    - [Unfixed bugs](#unfixed-bugs)
+    - [Bugs and Fixes](#bugs-and-fixes)
 - [Deployment](#deployment)
     - [Deploying in Heroku](#deploying-the-website-in-heroko)
     - [Cloning of Repo](#cloning-the-repository-in-github)
@@ -469,8 +469,14 @@ No errors were found.
     <img src = "assets/screenshots/run-valid.png" alt = "A screenshot of run.py result">
 </details>
 
-### Unfixed Bugs
+### Bugs and Fixes
 - No unfixed bugs.
+- Following bugs were fixed
+| **Bug** | **Fix** |
+| ------- | ------- |
+| When user login password input was wrong it was not giving an option to go back | Add signup_check function which will prompt again if user exist or not|
+|When user do not exist was prompted during login, user didn'T have option to go back| Add signup_check function which will prompt again if user exist or not|
+
 
 ## Deployment
 

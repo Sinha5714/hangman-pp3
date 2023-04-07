@@ -113,7 +113,7 @@ def user_exist():
                 print(f"{Fore.GREEN}\nWelcome back {current_user['name']}")
             else:
                 print("Incorrect password...")
-                user_exist()
+                signup_check()
         else:
             check_login += 1
     if check_login == len(logins):
