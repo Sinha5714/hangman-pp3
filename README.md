@@ -24,14 +24,14 @@
     - [Site Owner](#site-owner)
 - [Teachnical Design](#technical-design)
     - [Flowchart](#flowchart)
-- [Features](#features)
-    - [Existing Features](#existing-features)
-    - [Features to be implemented](#features-to-be-implemented)
 - [Technology Used](#technology-used)
     - [Language used](#language-used)
     -[Python Libraries used](#python-libraries-used)
     - [Other websites/tools used](#other-websitestools-used)
     - [3rd Party Python Libraries used](#3rd-party-python-libraries-used)
+- [Features](#features)
+    - [Existing Features](#existing-features)
+    - [Features to be implemented](#features-to-be-implemented)
 - [Testing](#testing)
     - [Manual Testing](#manual-testing)
     - [Tested Devices with Browsers](#tested-devices-with-browsers)
@@ -160,6 +160,7 @@
 7. I want user names and password to be saved to Google Spreadsheet
 8. I want the user to get errors displayed in case of wrong input
 9. I want data entry to be validated, to guide the user on how to correctly format the input
+10. I want user to see their name once they login
 
 ## Technical Design
 
@@ -172,88 +173,6 @@
     <p>Hangman Game Flowchart</p>
     <img src = "assets/screenshots/lucid.jpeg" alt = "A screenshot of flowchart">
 </details>
-
-## Features
-### Existing Features
-
-#### Home page display
-
-- Once the user run the program this area is displayed
-- The area consist of a display showing the heading
-- It also prompts the users to provide if they are an existing user
-
-<details>
-    <summary>Home Page screenshot</summary>
-    <img src="assets/screenshots/gameload.png" alt="Game load page">
-</details>  
-
-#### User Signup Area
-
-- This area display an instruction for signup for new users
-- This area is displayed when player is not an existing user
-- Once new username and password is entered, it prompts Signup confirmed..
-
-<details>
-    <summary>Sign Up Area screenshot</summary>
-    <img src="assets/screenshots/signup.png" alt="Sign up area">
-</details> 
-
-#### User Login Area
-
-- This area is displayed if user is an existing user
-- Users need to login their details to play the game
-
-<details>
-    <summary>Login Area screenshot</summary>
-    <img src="assets/screenshots/login.png" alt="Login area">
-</details> 
-
-
-#### Rules for the Game
-
-- This area shows the rule of the game
-- User can decide to see the rules or directly start the game
-- After rules is displayed game starts automatically
-
-<details>
-    <summary>Rules Area screenshot</summary>
-    <img src="assets/screenshots/rules.png" alt="Rules area">
-</details> 
-
-#### Game display Area
-
-- This area is displayed once the user read the rules or decide to skip the rules
-- Initial Display
-  - Hangman initial stage
-  - Attempts left
-  - Six " _ " depicting secret word
-- Once player guess a letter, the hint letters are displayed
-- This was done to make the game little exicting
-
-<details>
-    <summary>Game Area screenshot</summary>
-    <img src="assets/screenshots/gamedisplay.png" alt="Game area">
-</details> 
-
-#### Restart Game
-
-- Once the play has played the game, they recieve a promt if they want to play again or not
-- This is provided for both kind of players: Losers or Winners
-- If they decide to play again, the game will restart
-- If not the game will end and user will be logged out
-
-<details>
-    <summary>Restart Game screenshot</summary>
-    <img src="assets/screenshots/restart.png" alt="Restart Game">
-</details> 
-
-### Features to be implemented
-
-- More random words
-- Better display
-- Different levels as per the size of words
-- Multiple logins for multiple player game
-- Adding score and logging it
 
 ## Technology Used
 ### Language Used
@@ -278,6 +197,95 @@
 - [Google sheets API](https://github.com/burnash/gspread) was used to store and check the user input and authorize the user identity
 - [Google OAuth](https://google-auth.readthedocs.io/en/stable/reference/google.oauth2.credentials.html) was used to connect the project with the google account.
 - [Colorama](https://pypi.org/project/colorama/) was used for better visual display
+
+## Features
+
+### Home page display
+
+- Once the user run the program this area is displayed
+- The area consist of a display showing the heading
+- It also prompts the users to provide input if they are an existing user
+- User stories covered: 1
+<details>
+    <summary>Home Page screenshot</summary>
+    <img src="assets/screenshots/gameload.png" alt="Game load page">
+</details>  
+
+### User Signup Area
+
+- This area display an instruction for signup for new users
+- This area is displayed when player is not an existing user
+- Once new username and password is entered, it prompts Signup confirmed..
+- The input data is updated in google spreadsheet
+- User stories covered: 2, 8, 9
+
+<details>
+    <summary>Sign Up Area screenshot</summary>
+    <img src="assets/screenshots/signup.png" alt="Sign up area">
+    <img src="assets/screenshots/worksheet.png" alt="Worksheet"> 
+</details> 
+
+### User Login Area
+
+- This area is displayed if user is an existing user
+- Users need to login their details to play the game
+- User stories covered: 3, 8, 9
+
+<details>
+    <summary>Login Area screenshot</summary>
+    <img src="assets/screenshots/login.png" alt="Login area">
+</details> 
+
+### User Greeting
+- After user is logged in successfully, a welcome message is displayed
+- User stories covered: 6, 10
+
+<details>
+    <summary>Welcome message Screenshot</summary>
+    <img src="assets/screenshots/ustory3.png" alt="Welcome message">
+</details>
+
+### Rules for the Game
+
+- This area shows the rule of the game
+- User can decide to see the rules or directly start the game
+- After rules is displayed game starts automatically
+- User stories covered: 4
+
+<details>
+    <summary>Rules Area screenshot</summary>
+    <img src="assets/screenshots/rules.png" alt="Rules area">
+</details> 
+
+### Game display Area
+
+- This area is displayed once the user read the rules or decide to skip the rules
+- Initial Display
+  - Hangman initial stage
+  - Attempts left
+  - Six " _ " depicting secret word
+- Once player guess a letter, the hint letters are displayed
+- This was done to make the game little exicting
+- User stories covered : 6, 8
+
+<details>
+    <summary>Game Area screenshot</summary>
+    <img src="assets/screenshots/gamedisplay.png" alt="Game area">
+</details> 
+
+### Restart Game
+
+- Once the play has played the game, they recieve a promt if they want to play again or not
+- This is provided for both kind of players: Losers or Winners
+- If they decide to play again, the game will restart
+- If not the game will end and user will be logged out
+- User stories covered : 5, 9
+
+<details>
+    <summary>Restart Game screenshot</summary>
+    <img src="assets/screenshots/restart.png" alt="Restart Game">
+</details> 
+
 
 ## Testing
 - Manual testing of user stories
@@ -415,6 +423,18 @@
     <img src="assets/screenshots/errorrules.png" alt="Open rules"> 
     <img src="assets/screenshots/errorrestart.png" alt="Restart Question">
 </details>
+
+10. I want user to see their name once they login
+
+| **Feature**   | **Action**                    | **Expected Result**          | **Actual Result** |
+| ------------- | ----------------------------- | ---------------------------- | ----------------- |
+| Welcome (Username) | After successful login | Users are asked to input their username and password, and once validated, a greeting message with their name is displayed. | Works as expected |
+
+<details>
+    <summary>Screenshots</summary>
+    <img src="assets/screenshots/ustory3.png" alt="Welcome message">
+</details>
+
 </details>
 
 ### Testing on Browsers
@@ -532,7 +552,7 @@ No errors were found.
 
 
 ### Cloning the repository in GitHub
-1. Visit the GitHub page of the website’s repository
+1. Visit the GitHub page of the website's repository
 2. Click the “Clone” button on top of the page
 3. Click on “HTTPS”
 4. Click on the copy button next to the link to copy it
